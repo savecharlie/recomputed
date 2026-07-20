@@ -38,12 +38,16 @@ by catalogue, not by a title page glanced at.
 | Freeman | year | printing | prints | how read |
 |---|---|---|---|---|
 | **F1357** | 1881 | London/Murray, first edition | `·09612` | Darwin Online transcription **+ page image, by eye** |
-| **F1362** | 1882 | London/Murray, **sixth** thousand (corrected by Darwin) | `·09612` | Darwin Online transcription + IA `formationofveget00darwuoft` |
+| **F1362** | 1882 | London/Murray, **sixth** thousand (corrected by Darwin) | `·09612` | Darwin Online transcription + IA `formationofveget00darwuoft` + IA `formationofveget1882darw` (MBLWHOI copy, title page reads `SIXTH THOUSAND (CORRECTED)`) |
 | **F1364** | 1882 | London/Murray, **seventh** thousand (corrected by Francis Darwin) | `0·9627` ❌ | Darwin Online transcription **+ page image, by eye** |
 | — | 1883 | London/Murray | `0·9627` ❌ | IA scan |
-| — | 1897 | London/Murray, thirteenth thousand | `0·9627` ❌ | page image, by eye |
+| — | 1888 | London/Murray, **eleventh** thousand (corrected) | `0·9627` ❌ | IA `theformationof00darwiala` |
+| — | 1897 | London/Murray, thirteenth thousand | `0·9627` ❌ | page image, by eye + IA `formationofveget00darwiala` |
 | — | 1904 | London/Murray, thirteenth thousand (**text reset**) | `0·9627` ❌ | IA scan; PG's reproduced title page |
-| F1363 &c. | 1882–97 | **New York, Appleton** (four printings) | `·09612` ✅ | IA scans — the error never entered this line |
+| — | 1882 | **New York, Appleton** | `·09612` ✅ | IA `formationvegeta04darwgoog` |
+| — | 1888 | **New York, Appleton** | `·09612` ✅ | IA `formationofveget00darw` |
+| — | 1890 | **New York, Appleton** | `·09612` ✅ | IA `formationofveget01darw` |
+| — | 1896 | **New York, Appleton** | `·09612` ✅ | IA `cu31924090272919` |
 | — | 2000– | **Project Gutenberg #2355** | `0.9627` ❌ | `pg2355.txt`, in the sentence beginning "124.77 cubic inches" |
 
 The two 1882 London printings were checked in **two independent bodies of evidence**:
@@ -52,6 +56,41 @@ different copies. They agree.
 
 **Printer of both the first edition and the seventh thousand: William Clowes and Sons,
 Limited** (Stamford Street and Charing Cross), per the imprints.
+
+### What the widened witness set shows (added 20 Jul 2026)
+
+Six of the rows above were added in a second pass, sourced from English Wikisource's
+**versions page** for the book — the only finding aid I have met that keeps the London and the
+New York lines visually separate, which is the exact distinction this note turns on. Each was
+pulled independently from Internet Archive full text, and **the load-bearing sentence was read
+in context**, not grepped for a digit string.
+
+**1. "The 1882 London edition" is not a citable object.** Two Murray printings are dated 1882
+and they disagree on this number. This is now shown from *copies* rather than inferred from a
+catalogue: the MBLWHOI copy declares `SIXTH THOUSAND (CORRECTED)` on its own title page and
+reads `·09612`.
+
+**2. The stereotype claim is confirmed at the plate.** Freeman records that later printings were
+struck from stereotypes of 1888. The eleventh thousand (1888) reads `0·9627` — so the bad line
+was on those plates, and the 1904 resetting then set it wrong again from scratch. The
+1883→1897 gap is closed.
+
+**3. The American line held for fourteen years.** Appleton 1882, 1888, 1890, 1896 — four
+printings, four separate scans, all `·09612`. Two independent transmission chains descend from
+the same 1881 text, and only the one that was *corrected* went wrong.
+
+**4. There is a control inside the sentence itself, and it passes everywhere.** The same
+sentence performs a second conversion over the same square yard:
+
+```
+197.56 / 1296 = 0.152438…  →  ·1524      correct in ALL printings above
+124.77 / 1296 = 0.096273…  →  ·09627     broken from the seventh thousand on
+```
+
+Identical arithmetic, identical units, one line apart, set by the same compositor in the same
+pass — and only one of them moved. **So this is a single-token slip: not a policy, not a
+re-setting of units, not an editorial decision about notation.** I had noticed `·1524` as a
+*style* tell and never thought to check it as a *value* across the whole witness set.
 
 ## When: the window, bounded at both ends
 
