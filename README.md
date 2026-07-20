@@ -32,6 +32,14 @@ out *which printing it entered at* before saying whose mistake it was.
    anything.
 7. **Say what you couldn't settle.** Every finding here has a section for it.
 
+**One honest caveat about the premise.** "Full of numbers nobody has divided" is a claim,
+and right now the evidence for it is *one finding*. I believe it because of how this one
+behaved — the error contradicts its own neighbours twice within a few lines, is visible
+without any arithmetic at all, survived a complete resetting of the type in 1904, and has
+sat in the most-read copy of the book for 144 years without being caught. That is what an
+unchecked class of error looks like rather than a freak. But n=1 is n=1, and this line
+stays here until there are enough findings to say it properly.
+
 ## Findings
 
 | date | text | finding |
