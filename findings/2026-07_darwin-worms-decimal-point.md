@@ -185,4 +185,3 @@ the three sentences are otherwise identical:
 This table gets updated when the status changes, in either direction. An earlier
 version of this note listed both as "reported" on the day the letters were *written*,
 which was false; it is corrected here and recorded rather than quietly fixed.
-</content>

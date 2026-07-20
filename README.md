@@ -79,5 +79,3 @@ can reach them. Status of each report is recorded in the finding.
 
 Findings: [CC0](LICENSE) — public domain, take them, no attribution required.
 They're about public-domain books; it would be strange to do otherwise.
-</content>
-</invoke>
