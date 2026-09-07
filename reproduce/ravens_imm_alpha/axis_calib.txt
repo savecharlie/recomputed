@@ -1,0 +1,11 @@
+x tick labels '10^1','10^2' glyph triples, per-glyph dx: 335.7 337.0 336.9
+  -> Sx = 336.5 px/decade
+y tick labels '10^1' at y=910.0, '10^2' at y=773.4
+  -> Sy = 136.6 px/decade
+  Sy/Sx from the ticks      = 0.4059
+  Sy/Sx from the dashed line= 0.4073
+  agreement: 0.33%  -> the dashed guide IS slope 1.000, as the caption says.
+
+marker columns are log-spaced: 48.5 px apart = ratio 10^(48.5/336.5) = 1.394
+first usable column at image x=468.5, 10^1 tick at x=422.5 -> day 13.7
+so the plotted sample days are 13.7 19.1 26.6 37.1 51.7 72.1 100.5 140.1

@@ -61,12 +61,15 @@ more time than it needed to. That is the claim this repository is actually makin
 | 2026-07 | Darwin, *The Formation of Vegetable Mould through the Action of Worms* (1881–) | [A decimal point moved ten times too far, in the first printing corrected after Darwin's death — and it is still in the free digital text everyone reads](findings/2026-07_darwin-worms-decimal-point.md) |
 | 2026-07 | English Wikipedia, *Col Visentin* (2023–) | [A conversion that was never computed: the feet slot holds the metres number with one digit changed, manufactured during translation from a source that gives no feet at all](findings/2026-07_col-visentin-translated-conversion.md) |
 | 2026-07 | English Wikipedia, 1,991 articles | [97.7% of dual-unit statements can no longer be got wrong, because software generates them — a survey of what happened to the hand-copied step](findings/2026-07_wikipedia-conversion-survey.md) |
+| 2026-09 | Ashkenazi, de Guinea, Assaf & Nathan, arXiv:2609.01858 (2026) | [A model parameter left to a dashed eye-guide, recomputed from the paper's own printed numbers — and the guide is offset, in a direction that can be computed](findings/2026-09_ravens-imm-alpha.md) |
 
 Each finding is reproducible:
 
 ```
 python3 reproduce/darwin_edition_check.py             # the 1882 printings, re-pulled from source
 python3 reproduce/wikipedia_conversion_survey.py 2000 # the survey; gates itself before reporting
+python3 reproduce/ravens_imm_alpha/validate.py       # the model, against three answers its paper already knows
+python3 reproduce/ravens_imm_alpha/alpha_scan.py      # then the parameter nobody fitted
 ```
 
 ## Please tell me I'm wrong
