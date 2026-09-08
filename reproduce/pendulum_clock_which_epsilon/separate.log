@@ -1,0 +1,12 @@
+--- A: gamma fixed at 0.05, eps swept over a factor of 16 ---
+sweep-eps gamma=0.0500 eps=0.0125  R*=0.318 | Q=1.3555e-03 | gamma^2/2=1.2500e-03 (x1.08)  eps^2/2=7.8125e-05 (x17.35)   [71s]
+sweep-eps gamma=0.0500 eps=0.0250  R*=0.505 | Q=1.3244e-03 | gamma^2/2=1.2500e-03 (x1.06)  eps^2/2=3.1250e-04 (x4.24)   [69s]
+sweep-eps gamma=0.0500 eps=0.0500  R*=0.714 | Q=1.3031e-03 | gamma^2/2=1.2500e-03 (x1.04)  eps^2/2=1.2500e-03 (x1.04)   [66s]
+sweep-eps gamma=0.0500 eps=0.1000  R*=1.009 | Q=2.0441e-03 | gamma^2/2=1.2500e-03 (x1.64)  eps^2/2=5.0000e-03 (x0.41)   [70s]
+sweep-eps gamma=0.0500 eps=0.2000  R*=1.427 | Q=3.3999e-03 | gamma^2/2=1.2500e-03 (x2.72)  eps^2/2=2.0000e-02 (x0.17)   [68s]
+--- B: eps fixed at 0.05, gamma swept ---
+sweep-gam gamma=0.0125 eps=0.0500  R*=1.427 | Q=2.1685e-04 | gamma^2/2=7.8125e-05 (x2.78)  eps^2/2=1.2500e-03 (x0.17)   [98s]
+sweep-gam gamma=0.0250 eps=0.0500  R*=1.009 | Q=5.3600e-04 | gamma^2/2=3.1250e-04 (x1.72)  eps^2/2=1.2500e-03 (x0.43)   [79s]
+sweep-gam gamma=0.0500 eps=0.0500  R*=0.714 | Q=1.3724e-03 | gamma^2/2=1.2500e-03 (x1.10)  eps^2/2=1.2500e-03 (x1.10)   [66s]
+sweep-gam gamma=0.1000 eps=0.0500  R*=0.505 | Q=5.1604e-03 | gamma^2/2=5.0000e-03 (x1.03)  eps^2/2=1.2500e-03 (x4.13)   [63s]
+sweep-gam gamma=0.2000 eps=0.0500  R*=0.318 | Q=2.0785e-02 | gamma^2/2=2.0000e-02 (x1.04)  eps^2/2=1.2500e-03 (x16.63)   [64s]

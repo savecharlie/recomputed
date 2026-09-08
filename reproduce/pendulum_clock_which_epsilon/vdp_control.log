@@ -1,0 +1,6 @@
+vdp  eps/gamma= 0.7  R*=1.633 | D/Dpred 1.04 | sigma/pred 0.99 | Omega -1.0000 | Q/(gamma^2/2) = 1.034   [39s]
+vdp  eps/gamma= 1.0  R*=2.000 | D/Dpred 1.00 | sigma/pred 1.00 | Omega -0.9999 | Q/(gamma^2/2) = 1.002   [40s]
+vdp  eps/gamma= 1.5  R*=2.309 | D/Dpred 0.98 | sigma/pred 1.00 | Omega -0.9995 | Q/(gamma^2/2) = 0.982   [41s]
+vdp  eps/gamma= 2.0  R*=2.449 | D/Dpred 1.03 | sigma/pred 1.00 | Omega -0.9988 | Q/(gamma^2/2) = 1.033   [41s]
+vdp  eps/gamma= 3.0  R*=2.582 | D/Dpred 1.00 | sigma/pred 1.01 | Omega -0.9964 | Q/(gamma^2/2) = 1.015   [40s]
+vdp  eps/gamma= 4.0  R*=2.646 | D/Dpred 1.08 | sigma/pred 1.01 | Omega -0.9928 | Q/(gamma^2/2) = 1.105   [38s]

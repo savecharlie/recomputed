@@ -63,6 +63,7 @@ more time than it needed to. That is the claim this repository is actually makin
 | 2026-07 | English Wikipedia, 1,991 articles | [97.7% of dual-unit statements can no longer be got wrong, because software generates them — a survey of what happened to the hand-copied step](findings/2026-07_wikipedia-conversion-survey.md) |
 | 2026-09 | Ashkenazi, de Guinea, Assaf & Nathan, arXiv:2609.01858 (2026) | [A model parameter left to a dashed eye-guide, recomputed from the paper's own printed numbers — and the guide is offset, in a direction that can be computed](findings/2026-09_ravens-imm-alpha.md) |
 | 2026-09 | Yokota & Kurita, arXiv:2609.00587 (2026) | [A scaling collapse fitted on the top third of its own drive range — the paper's other figure goes four times lower, and the fitted law misses it by up to 3.5 decades](findings/2026-09_granular-durability-collapse-window.md) |
+| 2026-09 | Izumida, arXiv:2609.04957 (2026) | [A universal law whose single small parameter is doing three jobs at once — separate them and the escapement drops out, leaving the clockmaker's quality factor](findings/2026-09_pendulum-clock-which-epsilon.md) |
 
 Each finding is reproducible:
 
@@ -71,6 +72,8 @@ python3 reproduce/darwin_edition_check.py             # the 1882 printings, re-p
 python3 reproduce/wikipedia_conversion_survey.py 2000 # the survey; gates itself before reporting
 python3 reproduce/ravens_imm_alpha/validate.py       # the model, against three answers its paper already knows
 python3 reproduce/ravens_imm_alpha/alpha_scan.py      # then the parameter nobody fitted
+python3 reproduce/pendulum_clock_which_epsilon/reproduce_paper.py   # gate: return the paper's own law
+python3 reproduce/pendulum_clock_which_epsilon/vdp_control.py       # then the control that settles which parameter it is
 ```
 
 ## Please tell me I'm wrong
