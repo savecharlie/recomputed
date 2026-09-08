@@ -1,0 +1,95 @@
+alpha=0.4: 15 markers  G rows ~ [0.41, 0.89, 1.4, 2.4, 3.07]
+alpha=0.5: 13 markers  G rows ~ [0.89, 1.4, 2.4, 3.07]
+alpha=0.6: 11 markers  G rows ~ [1.42, 2.41, 3.08]
+alpha=0.7: 11 markers  G rows ~ [1.37, 1.38, 2.37, 3.04]
+alpha=0.8:  5 markers  G rows ~ [2.39, 3.07]
+total 55
+blobs 72, markers kept 34
+
+alpha   n   alpha^2/G span        implied G span
+  0.4   7   0.039 .. 0.067    G = 2.40 .. 4.07
+  0.5   4   0.061 .. 0.104    G = 2.40 .. 4.07
+  0.6   7   0.088 .. 0.150    G = 2.40 .. 4.07
+  0.7   9   0.120 .. 0.204    G = 2.40 .. 4.07
+  0.8   7   0.157 .. 0.188    G = 3.40 .. 4.07
+n = 55 digitized points, G in [0.41, 3.07]
+
+M1  paper's product form, ALL of Fig 3
+           const =     6.789 +-  0.315
+      C1 (a^2/G) =    10.100 +-  1.577
+    rmse(lnNf) 1.066   R2 0.436   AIC 9.0
+
+M2  additive, no interaction
+           const =     5.179 +-  0.254
+         B (a^2) =     8.870 +-  0.533
+         C (1/G) =     0.770 +-  0.190
+    rmse(lnNf) 0.567   R2 0.843   AIC -59.5
+
+M3  full
+           const =     6.047 +-  0.233
+         B (a^2) =     4.135 +-  0.838
+         C (1/G) =    -1.255 +-  0.346
+       D (a^2/G) =    10.855 +-  1.688
+    rmse(lnNf) 0.426   R2 0.914   AIC -90.1
+
+--- restricted to the Fig-4 window, G >= 2.4  (n = 33) ---
+M1 on G >= 2.4 only
+           const =     5.712 +-  0.162
+      C1 (a^2/G) =    21.588 +-  1.107
+    rmse(lnNf) 0.388   R2 0.925   AIC -60.5
+
+--- the data Fig 4 leaves out, G <= 1.4  (n = 22) ---
+M1 on G <= 1.4 only
+           const =     5.774 +-  0.661
+      C1 (a^2/G) =    11.487 +-  2.547
+    rmse(lnNf) 1.054   R2 0.504   AIC 4.2
+
+implied drive frequency for each G row (amplitude fixed at 0.31 mm):
+   G = 0.41  ->  f =  18.1 Hz
+   G = 0.89  ->  f =  26.7 Hz
+   G =  1.4  ->  f =  33.5 Hz
+   G =  2.4  ->  f =  43.9 Hz
+   G = 3.07  ->  f =  49.6 Hz
+  (the paper's own 50 Hz / 0.31 mm gives G = 3.12, and 40 Hz gives 2.00)
+
+lifetime in CYCLES N_f     :  product form  C =  10.10  R2 = 0.436   |  additive  B(a^2) =   8.87  C(1/G) =   0.77  R2 = 0.843
+lifetime in SECONDS N_f / f:  product form  C =  11.91  R2 = 0.601   |  additive  B(a^2) =   8.81  C(1/G) =   1.31  R2 = 0.819
+
+per-alpha sensitivity to 1/G, which Eq. 2 says must equal C1*alpha^2:
+alpha  slope(lnN vs 1/G)  slope(lnT vs 1/G)   26.8*a^2
+  0.4               0.55               1.02       4.29
+  0.5               2.01               2.81       6.70
+  0.6               2.27               3.26       9.65
+  0.7               3.34               4.33      13.13
+  0.8               8.65              10.00      17.15
+
+--- does Eq. 2 with the paper's constants predict its own alpha>=0.9 null result? ---
+  alpha=0.9, G=3.07:  Eq.2 N_f =   3.18e+05 cycles =     1.78 h at 50 Hz   -> should have FAILED inside the 10 h window
+  alpha=0.9, G=2.4:  Eq.2 N_f =   2.29e+06 cycles =    14.51 h at 44 Hz   -> consistent with no failure
+  alpha=1.0, G=3.07:  Eq.2 N_f =   1.67e+06 cycles =     9.36 h at 50 Hz   -> should have FAILED inside the 10 h window
+  alpha=1.0, G=2.4:  Eq.2 N_f =   1.91e+07 cycles =   121.07 h at 44 Hz   -> consistent with no failure
+max |G - snapped| = 0.03
+  alpha=0.4  n=15  G=0.41:2  G=0.89:3  G=1.4:3  G=2.4:4  G=3.07:3
+  alpha=0.5  n=13  G=0.89:2  G=1.4:4  G=2.4:3  G=3.07:4
+  alpha=0.6  n=11  G=1.4:4  G=2.4:3  G=3.07:4
+  alpha=0.7  n=11  G=1.4:4  G=2.4:3  G=3.07:4
+  alpha=0.8  n= 5  G=2.4:2  G=3.07:3
+
+Route 1  nu = 4.156 +- 0.341   C = 26.45 +- 2.69   1/p0 = 1084.6  (p0 = 0.00092)
+         rms residual in ln N_f = 0.577  (78% in N_f)
+nu=2 fixed:  C = 10.10   1/p0 = 888.3  (p0 = 0.00113)   rms = 1.066
+
+Route 2 — slope of ln N_f vs 1/G, fitted inside each alpha alone
+  alpha=0.4: slope C*alpha^nu =    0.55 +-  0.13   intercept ln(1/p0) =  6.46   n=15
+  alpha=0.5: slope C*alpha^nu =    2.01 +-  0.49   intercept ln(1/p0) =  7.03   n=13
+  alpha=0.6: slope C*alpha^nu =    2.27 +-  0.49   intercept ln(1/p0) =  7.75   n=11
+  alpha=0.7: slope C*alpha^nu =    3.34 +-  0.63   intercept ln(1/p0) =  8.34   n=11
+  alpha=0.8: slope C*alpha^nu =    8.65 +-  5.80   intercept ln(1/p0) =  7.60   n=5
+
+Route 2  nu = 3.074   68% [2.56, 3.58]   95% [2.05, 4.18]   C = 11.28
+alpha=0.4: required   4.29   measured   0.55   ratio   7.8
+alpha=0.5: required   6.70   measured   2.01   ratio   3.3
+alpha=0.6: required   9.65   measured   2.27   ratio   4.3
+alpha=0.7: required  13.13   measured   3.34   ratio   3.9
+alpha=0.8: required  17.15   measured   8.65   ratio   2.0
+wrote collapse_window.png

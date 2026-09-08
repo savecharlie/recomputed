@@ -62,6 +62,7 @@ more time than it needed to. That is the claim this repository is actually makin
 | 2026-07 | English Wikipedia, *Col Visentin* (2023–) | [A conversion that was never computed: the feet slot holds the metres number with one digit changed, manufactured during translation from a source that gives no feet at all](findings/2026-07_col-visentin-translated-conversion.md) |
 | 2026-07 | English Wikipedia, 1,991 articles | [97.7% of dual-unit statements can no longer be got wrong, because software generates them — a survey of what happened to the hand-copied step](findings/2026-07_wikipedia-conversion-survey.md) |
 | 2026-09 | Ashkenazi, de Guinea, Assaf & Nathan, arXiv:2609.01858 (2026) | [A model parameter left to a dashed eye-guide, recomputed from the paper's own printed numbers — and the guide is offset, in a direction that can be computed](findings/2026-09_ravens-imm-alpha.md) |
+| 2026-09 | Yokota & Kurita, arXiv:2609.00587 (2026) | [A scaling collapse fitted on the top third of its own drive range — the paper's other figure goes four times lower, and the fitted law misses it by up to 3.5 decades](findings/2026-09_granular-durability-collapse-window.md) |
 
 Each finding is reproducible:
 
