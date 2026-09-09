@@ -172,6 +172,16 @@ def run(esc, gamma, eps, T, n_traj=2000, t_total=1000.0, dt=1e-3,
     m = ts > ts[-1] * 0.25
     D_phi = float(np.sum(ts[m] * varJ[m]) / np.sum(ts[m] ** 2) / 2.0)
     Omega = float(np.sum(ts[m] * meanJ[m]) / np.sum(ts[m] ** 2))
+    # Same slope, fitted WITH an intercept.  A through-origin fit systematically
+    # UNDER-reads D_Phi whenever the phase noise has a finite correlation time:
+    # Var(J) -> A t - B with B = 2 D_cor tau, so forcing the line through zero
+    # tilts the slope down by B <t>/<t^2>.  Added Sep 9 2026 (fire 261) when the
+    # amplitude-to-phase theory predicted exactly that bias; the intercept
+    # absorbs B and the slope is unbiased for ANY finite-tau frequency noise.
+    A_ = np.vstack([ts[m], np.ones(int(m.sum()))]).T
+    sl_, ic_ = np.linalg.lstsq(A_, varJ[m], rcond=None)[0]
+    D_phi_int = float(sl_ / 2.0)
+    varJ_intercept = float(ic_)
 
     om2 = acc_om2 / nacc
     R2 = acc_R2 / nacc
@@ -182,7 +192,8 @@ def run(esc, gamma, eps, T, n_traj=2000, t_total=1000.0, dt=1e-3,
     sigma_irr = sigma_heat - sigma_pump
     Q = 2.0 * D_phi / Omega ** 2 * sigma_irr
 
-    return dict(Rstar=Rstar, D_phi=D_phi, Omega=Omega, om2=om2, R2=R2,
+    return dict(Rstar=Rstar, D_phi=D_phi, D_phi_int=D_phi_int,
+                varJ_intercept=varJ_intercept, Omega=Omega, om2=om2, R2=R2,
                 Teff=Teff, sigma_heat=sigma_heat, sigma_pump=sigma_pump,
                 sigma_irr=sigma_irr, Q=Q, ts=ts, varJ=varJ, meanJ=meanJ,
                 gamma=gamma, eps=eps, T=T, model=esc.name)
