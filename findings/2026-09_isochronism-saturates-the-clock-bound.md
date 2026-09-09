@@ -98,10 +98,16 @@ sweep ran. Both estimators agree there and both give one.
 measured *shallower* than predicted, and at `u = 5` the two estimators disagree by 19%
 (1.155 vs 1.375) where the theory says they should differ by about 1%. That is a ruler
 problem, not a physics result: the two-parameter fit absorbs noise into its intercept
-when `D_cor` is large. Repeat seeds at `u = 3.5` give 1.083 / 1.156 / (see
-`dip_repeats.json`), so single-point scatter is several percent on its own. **The
-location of the minimum is settled; the magnitude of the penalty away from it is not
-settled by this sweep.**
+when `D_cor` is large.
+
+**Repeats, because one point was not enough to tell scatter from a systematic**
+(`dip_repeats.py`). Four independent seeds at `u = 3.5` give
+**1.083, 1.156, 1.081, 1.167** — mean **1.1215**, s.d. 0.046 (**4.1%**), s.e.m. 0.023.
+So single-run scatter is 4%, and the shortfall against the prediction of 1.212 is
+**7.5%, or 3.9 standard errors**. Real, and much smaller than the single point
+suggested. **The location of the minimum is settled; the magnitude of the penalty
+away from it is under-read by a few per cent per this sweep and confirmed to 2% by
+the next one, and those two statements do not yet fit together.**
 
 ## Test 2 — the floor, where the correction dominates 6 to 1
 

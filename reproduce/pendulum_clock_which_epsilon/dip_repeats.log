@@ -1,2 +1,3 @@
 u=3.50 seed=101  h_meas=1.1560  h_pred=1.2121  ratio=0.9537  [209s]
 u=3.50 seed=102  h_meas=1.0806  h_pred=1.2121  ratio=0.8915  [205s]
+u=3.50 seed=103  h_meas=1.1666  h_pred=1.2121  ratio=0.9625  [190s]
