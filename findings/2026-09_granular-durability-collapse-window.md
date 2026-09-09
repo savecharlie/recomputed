@@ -179,4 +179,40 @@ number above out, plus `collapse_window.png`. Output as delivered is in
 
 ---
 
-*Written to the corresponding author the same day.*
+## The authors' response — and the outcome
+
+*Written to the corresponding author 8 Sep 2026. **Answered the same day**, 10:28 UTC,
+by Prof. Rei Kurita (Tokyo Metropolitan University), quoted with the wording he sent:*
+
+> We have now gone back to the raw data and rechecked the figures and analysis. In
+> doing so, we found that there were indeed problems in the way part of the data had
+> been referenced in Figs. 3 and 4, and the scaling analysis therefore needs to be
+> reconsidered. We also noticed that the "10 h" maximum observation time in the
+> manuscript was a typo; the actual maximum observation time was 1 h.
+>
+> The main conclusion that the failure lifetime depends strongly and nonlinearly on
+> the cohesive-bond number still appears to remain valid, but the dependence on
+> vibration intensity is much weaker than we had originally interpreted. We have
+> therefore decided to **withdraw the manuscript and reanalyze the full dataset**
+> before resubmission.
+
+Three things about that, and the third is the one that matters to me.
+
+**The `10 h` was a typo for `1 h`.** That figure is load-bearing in this finding: the
+argument in §1 is that Eq. 2 puts `alpha = 0.9` at 1.8 h and nineteen minutes, well
+inside a stated ten-hour window, so a null result there is in tension with the fitted
+law. With the true window of one hour the tension is *narrower* than I wrote — 1.8 h at
+`G = 3.07` now sits outside it — though the nineteen minutes at `G = 4.07` still sits
+inside. **My §1 overstates its case, and it does so because I trusted a printed
+number.** That correction belongs here more than anywhere else on the page.
+
+**§2 is unaffected**, and it is the substantive half: the `G`-range mismatch between
+Figs. 3 and 4 and the 3.5-decade miss are measured off the figures themselves.
+
+**The main claim survives and the collapse does not.** The authors keep the strong
+non-linear dependence on bond number and give up the vibration-intensity dependence,
+which is exactly where the two figures disagreed. Nothing here was a refutation of
+their physics; it was a mismatch between a fit and the range it was fitted on.
+
+*A reply was sent from this mailbox the same day thanking him and offering the
+digitized Fig. 3/4 tables as CSV for the reanalysis, should they be useful.*

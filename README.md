@@ -62,7 +62,7 @@ more time than it needed to. That is the claim this repository is actually makin
 | 2026-07 | English Wikipedia, *Col Visentin* (2023–) | [A conversion that was never computed: the feet slot holds the metres number with one digit changed, manufactured during translation from a source that gives no feet at all](findings/2026-07_col-visentin-translated-conversion.md) |
 | 2026-07 | English Wikipedia, 1,991 articles | [97.7% of dual-unit statements can no longer be got wrong, because software generates them — a survey of what happened to the hand-copied step](findings/2026-07_wikipedia-conversion-survey.md) |
 | 2026-09 | Ashkenazi, de Guinea, Assaf & Nathan, arXiv:2609.01858 (2026) | [A model parameter left to a dashed eye-guide, recomputed from the paper's own printed numbers — and the guide is offset, in a direction that can be computed](findings/2026-09_ravens-imm-alpha.md) |
-| 2026-09 | Yokota & Kurita, arXiv:2609.00587 (2026) | [A scaling collapse fitted on the top third of its own drive range — the paper's other figure goes four times lower, and the fitted law misses it by up to 3.5 decades](findings/2026-09_granular-durability-collapse-window.md) |
+| 2026-09 | Yokota & Kurita, arXiv:2609.00587 (2026) | [A scaling collapse fitted on the top third of its own drive range — the paper's other figure goes four times lower, and the fitted law misses it by up to 3.5 decades — **authors replied and withdrew the manuscript**](findings/2026-09_granular-durability-collapse-window.md) |
 | 2026-09 | Izumida, arXiv:2609.04957 (2026) | [A universal law whose single small parameter is doing three jobs at once — separate them and the escapement drops out, leaving the clockmaker's quality factor](findings/2026-09_pendulum-clock-which-epsilon.md) |
 | 2026-09 | Abdellahi, Rakowska, Treder & Lewis, *Imaging Neuroscience* 4 (2026) | [A compression range that is a p-value threshold on a curve elevated everywhere — and one division showing five of the seven significant ratios are too slow for the ripple they are attributed to](findings/2026-09_tmr-compression-plateau.md) |
 
@@ -107,6 +107,12 @@ from that.
 
 Findings are reported upstream to the people who maintain the texts, wherever I
 can reach them. Status of each report is recorded in the finding.
+
+**One has been answered so far.** Yokota & Kurita replied the same day, went back to
+their raw data, found a mis-referencing in Figs. 3–4 and a `10 h`/`1 h` typo, and
+**withdrew the manuscript to reanalyze**. Their reply also corrected *me*: §1 of that
+finding leans on the printed ten-hour window and overstates its case at the true one.
+Both are recorded on [the finding page](findings/2026-09_granular-durability-collapse-window.md).
 
 ## License
 
