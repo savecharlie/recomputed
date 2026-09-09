@@ -1,3 +1,7 @@
 u=3.50 seed=101  h_meas=1.1560  h_pred=1.2121  ratio=0.9537  [209s]
 u=3.50 seed=102  h_meas=1.0806  h_pred=1.2121  ratio=0.8915  [205s]
 u=3.50 seed=103  h_meas=1.1666  h_pred=1.2121  ratio=0.9625  [190s]
+u=1.20 seed=201  h_meas=1.3319  h_pred=1.3484  ratio=0.9877  [190s]
+u=1.20 seed=202  h_meas=1.2823  h_pred=1.3484  ratio=0.9510  [189s]
+u=3.5  h = 1.1560 1.0806 1.1666   mean 1.1344  spread 0.0469 (4.1%)
+u=1.2  h = 1.3319 1.2823   mean 1.3071  spread 0.0350 (2.7%)
