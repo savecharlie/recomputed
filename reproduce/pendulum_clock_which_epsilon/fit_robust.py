@@ -55,8 +55,7 @@ def fit(C, dtr, Om, tau, L0_cycles=1.0, nharm=4, mixed=False):
     L = np.arange(len(C)) * dtr
     m = L >= L0_cycles * 2 * math.pi / Om
     Lm, Cm = L[m], C[m]
-    best = None
-    for k in np.linspace(0.3 / tau, 3.0 / tau, 801):
+    def score(k):
         cols = [np.exp(-k * Lm), np.ones_like(Lm)]
         for jj in range(1, nharm + 1):
             cols += [np.cos(jj * Om * Lm), np.sin(jj * Om * Lm)]
@@ -65,10 +64,16 @@ def fit(C, dtr, Om, tau, L0_cycles=1.0, nharm=4, mixed=False):
                          np.exp(-k * Lm) * np.sin(jj * Om * Lm)]
         A = np.column_stack(cols)
         c, *_ = np.linalg.lstsq(A, Cm, rcond=None)
-        r = float(np.sum((A @ c - Cm) ** 2))
-        if best is None or r < best[0]:
-            best = (r, float(c[0]))
-    return math.sqrt(max(best[1], 0.0))
+        return float(np.sum((A @ c - Cm) ** 2)), float(c[0])
+
+    # two-stage grid: same resolution as a single 801-point sweep, 6x fewer solves
+    lo, hi = 0.3 / tau, 3.0 / tau
+    g = np.linspace(lo, hi, 81)
+    best = min(((score(k), k) for k in g), key=lambda t: t[0][0])
+    d = (hi - lo) / 80
+    g2 = np.linspace(best[1] - d, best[1] + d, 41)
+    best = min([best] + [((score(k)), k) for k in g2], key=lambda t: t[0][0])
+    return math.sqrt(max(best[0][1], 0.0))
 
 
 rows = []
