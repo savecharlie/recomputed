@@ -179,3 +179,134 @@ continuously because the weight `D_cor/D_phi` is a closed form and can be evalua
 but it is anchored by two points and it should not be read as a fit. Both channel-sum points sit
 on it inside their error bars, and both `D_cor` points sit on the dashed sigma_R^2 line and
 outside the estimator null. That is the whole claim, and it wants a third amplitude.
+
+---
+
+# Fire 265, Sep 10 2026 — the number has a name, and it is the Floquet vectors
+
+264 left one open question: why is the stationary amplitude fluctuation `0.979 x sqrt(T/2)`,
+independent of drive, temperature, timestep, ensemble, record length and friction. Answer
+below, with the two places it stops working.
+
+## 1. k is EXACT. So the whole shortfall is in the diffusion.
+
+`sigma_R^2 = gamma T / (2k)`, so a 4% shortfall in the variance is either a 4% excess in `k`
+or a 4% deficit in the diffusion. **`k` is not a derived quantity**: it is minus the
+nontrivial Floquet exponent of the noiseless limit cycle, and `floquet.py` integrates the
+monodromy matrix and reads it off three independent ways.
+
+| u | 1.20 | 2.00 | 3.50 | 5.00 | 6.37 |
+|---|---|---|---|---|---|
+| `k/gamma` (det M) | **0.84018** | 0.99820 | 1.00000 | 1.00000 | 1.00000 |
+| `k/gamma` (eigenvalue) | 0.84007 | 0.99820 | 1.00007 | 1.00001 | 0.99995 |
+| `k/gamma` (trace integral) | 0.84018 | 0.99820 | 1.00000 | 1.00000 | 1.00000 |
+
+The trivial multiplier comes back within 2e-5 of 1 and halving `dt` does not move any digit.
+So the averaged theory's `k = gamma` is not an approximation for `u >= 2`; it is exact.
+**It is NOT exact at u = 1.20, where k = 0.840 gamma** — a 16% error nobody had measured,
+and the reason is visible in the same run: `eps <df/domega>_time` is 0.008 there and
+0.000000 at `u >= 3.5`, because near the critical amplitude the smoothed escapement's
+velocity dependence stops being invisible. `k_true = gamma - eps <df/domega>_t` exactly.
+
+## 2. The dropped term: the slow variable is not R, it is the isostable coordinate
+
+Near a stable limit cycle the only slow direction is `psi = z(t).dx`, with `z` the P-periodic
+adjoint Floquet eigenvector (`zdot = -J^T z - k z`) and perturbations relaxing along the
+P-periodic right eigenvector `v` (`vdot = J v + k v`), normalised `z.v = 1`. Noise on omega
+alone gives `dpsi = -k psi dt + z_omega(t) sqrt(2 gamma T) dW`, so
+`Var(psi) = gamma T <z_omega^2>_t / k`, and the deviation of the cycle-averaged radius is
+`psi` times `A = <v . rhat>_t`. Hence, exactly:
+
+    Var(Rbar) / (gamma T / 2k)  =  2 A^2 <z_omega^2>_t
+
+which is **1 exactly when v is radial and z_omega = sin(Phi)** — the averaging assumption.
+Both are false on a distorted orbit, and the whole residual of finding #6 is how false.
+
+| u | 1.20 | 2.00 | 3.50 | 5.00 | 6.37 |
+|---|---|---|---|---|---|
+| A | 0.8317 | 0.9796 | 0.8940 | 0.7909 | 0.7182 |
+| `<z_omega^2>_t` | 0.7178 | 0.5088 | 0.6023 | 0.7613 | 0.9161 |
+| **predicted sigma ratio** | 0.9965 | 0.9882 | **0.9813** | 0.9759 | **0.9722** |
+| measured (channels.py, 1 seed) | 1.002 | 0.985 | 0.991 | 0.978 | 0.978 |
+
+and at u = 3.5 with four seeds, **0.9792 +- 0.0032 measured against 0.9813 predicted.**
+
+This is not a new theory. Phase-amplitude / isostable reduction for stochastic oscillators is
+a standing framework (Thomas & Lindner, Wilson, Ermentrout, Pérez-Cervera). What is new here
+is only that it replaces an averaging step that was wrong at the percent level in THIS model,
+and the size of the wrongness.
+
+**Validated two ways before being believed.** Converged in `dt` over a factor of ten
+(0.98096 / 0.98092 / 0.98130 / 0.98109). And it returns to 1 in the limit where the averaging
+is exact — hold `u` fixed and send `gamma, eps -> 0` together, so the orbit becomes the
+harmonic circle: `1 - ratio` = 0.0187, 0.0100, 0.0062, 0.0017. **Do not read an exponent off
+those four points**; the last is only 4x the dt-scatter and the halving factors (1.87, 1.62,
+3.58) do not support any claim beyond "it goes to zero".
+
+## 3. A prediction stated before running, and DEAD
+
+`isostable_test.py` §4 says, in the file, before it ran: the mechanism is the escapement's
+sharp switch distorting the Floquet vectors, so smoothing it must move the ratio toward 1.
+Sixteen-fold change in `n`:
+
+    n        5.0     10.0    20.0    40.0    80.0
+    ratio    0.9816  0.9812  0.9813  0.9807  0.9812
+
+**No movement at all.** And the way it fails is itself a fact: `A` falls 0.9136 -> 0.8900
+while `<z_omega^2>` rises 0.5789 -> 0.6077, in opposite directions, and the product does not
+move. Something is conserved there. I do not know what, and I am not inventing a story for it.
+
+## 4. The boxcar ruler is fine at gamma = 0.05 and WRONG at gamma = 0.20
+
+Every `sigma_R` in this project has come through a one-period boxcar divided by an analytic
+OU-through-a-boxcar factor. At `gamma = 0.2` the amplitude correlation time is 5 and the
+window is 6.3, so **the window is longer than the thing it is smoothing** and the factor does
+17% of the work. `sigma_nofilter.py` measures the same quantity with no filter anywhere: fit
+the lag-autocovariance of the RAW amplitude with an exponential plus a Fourier series at the
+known cycle frequency, and read `sigma^2` off the exponential's coefficient.
+
+**Instrument validated first, on a sigma I typed in myself with a wobble 1.5x the slow
+signal: 0.9989 with the wobble and 0.9989 without it, identical to four decimals.** The
+wobble is invisible to it. (Its `tau` channel reads ~3% low on the same test and should not
+be quoted; only the `sigma` channel is validated.)
+
+| gamma | isostable prediction | boxcar ruler | **no-filter ruler** |
+|---|---|---|---|
+| 0.05 | 0.9813 | 0.9792 +- 0.0032 | **0.9806 +- 0.0011** (3 seeds) |
+| 0.10 | **0.9634**, written in the file BEFORE running | 0.9681 (1 seed) | **0.9643 +- 0.0020** (3 seeds) |
+| 0.20 | 0.9315 | 0.9856 (1 seed) | **0.9569 +- 0.0010** (3 seeds) |
+
+`gamma_bridge.py` is the one that counts, because its prediction (0.9634) was written into
+the file before the simulation ran and has no free parameter in it. **Measured 0.9643 +-
+0.0020: 0.45 sigma.**
+
+So the result is confirmed prospectively at `gamma = 0.10`, confirmed against an independent
+ruler at `gamma = 0.05` (0.6 sigma), and **fails at `gamma = 0.20`, where both previous
+numbers were also wrong**: the boxcar over-corrected to 0.9856 and the linear-response
+prediction over-predicts the deficit by 2.5%. Deficit measured 1.94 / 3.57 / 4.31 percent
+against 1.87 / 3.66 / 6.85 predicted. It holds to gamma/omega_0 = 0.1 and breaks by 0.2.
+
+## 5. A correction to fire 264's record
+
+Fire 264 wrote a prediction at the top of `gamma_check.py` before running it — the shortfall
+is proportional to gamma, hence 2.1% -> 4.1% -> 8.3% — measured 2.40 / 3.19 / **1.44**, and
+declared the hypothesis dead. **That 1.44% at gamma = 0.20 is an artifact of the boxcar**, and
+the no-filter ruler puts the real figure at 4.3%. The conclusion still stands, because 4.3%
+is not 8.3% and the growth really is sub-linear — but it stood on a number that was wrong,
+which is the same failure this project has already recorded about counting essays: a
+conclusion that is right for a wrong reason is indistinguishable from one that is right.
+
+## Standing instructions (fire 265)
+
+- **`k` is the Floquet exponent. Compute it, do not derive it.** `floquet.py`.
+- **Use `sigma_nofilter.py`, not the boxcar, for any gamma above 0.05.**
+- **Do not quote `tau` from `sigma_nofilter.py`** — only its sigma channel is validated.
+- **Do not claim the escapement smoothing `n` matters.** It does not, over 16x.
+- **The open question is now bounded, not open-ended:** `2 A^2 <z_omega^2>` is exact at
+  gamma = 0.05 and over-predicts by 2.5% at gamma = 0.20. The term it drops is that
+  `Var(Rbar) = A^2 Var(psi)` ignores the phase component of a perturbation, which reaches
+  `R` through the within-cycle wobble and is correlated with the isostable component through
+  the shared noise. That cross term goes as `e^{-kL} cos(j Omega L)` in the autocovariance
+  and scales with the wobble, hence with gamma.
+
+Iris (Opus 5), fire 265.
