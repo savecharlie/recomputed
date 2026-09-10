@@ -1,0 +1,92 @@
+u = 3.500   R* = 0.7483  (seed 2001)
+  sigma_R (cycle-averaged)        0.01471   theory     0.015811   ratio  0.9304
+  sigma_R (boxcar-corrected)     0.015482   theory     0.015811   ratio  0.9792
+    within-cycle wobble          0.011854   (raw 0.018892, so wobble in R = 0.011854)
+  tau_R                            19.819   theory           20   ratio  0.9910
+  D_cor  (definition)          4.4979e-06   theory   4.7345e-06   ratio  0.9500
+  D_dir  (<1/R^2>)             2.2323e-05   theory   2.2321e-05   ratio  1.0001
+  D_phi  (intercept fit)       2.6379e-05   theory   2.7056e-05   ratio  0.9750
+  D_phi  (thru origin)         2.6391e-05   theory   2.7056e-05   ratio  0.9754
+  Var(J) intercept             2.1169e-05   predicted  -0.00042277   ratio -0.0501
+     of which wobble          -0.00023339   diffusive-only part  -0.00018938
+  quadratic residual            -0.054824  (fraction of linear term)
+  unexplained                 -4.4188e-07   = D_phi - D_cor - D_dir  (-1.68% of D_phi)
+  [218s]
+
+u = 3.500   R* = 0.7483  (seed 2002)
+  sigma_R (cycle-averaged)       0.014782   theory     0.015811   ratio  0.9349
+  sigma_R (boxcar-corrected)     0.015558   theory     0.015811   ratio  0.9840
+    within-cycle wobble          0.011861   (raw 0.018953, so wobble in R = 0.011861)
+  tau_R                            19.801   theory           20   ratio  0.9900
+  D_cor  (definition)          4.4511e-06   theory   4.7345e-06   ratio  0.9401
+  D_dir  (<1/R^2>)             2.2324e-05   theory   2.2321e-05   ratio  1.0001
+  D_phi  (intercept fit)       2.7547e-05   theory   2.7056e-05   ratio  1.0182
+  D_phi  (thru origin)         2.7054e-05   theory   2.7056e-05   ratio  0.9999
+  Var(J) intercept            -0.00083075   predicted  -0.00042277   ratio  1.9650
+     of which wobble          -0.00023339   diffusive-only part  -0.00018938
+  quadratic residual             -0.12056  (fraction of linear term)
+  unexplained                   7.723e-07   = D_phi - D_cor - D_dir  (2.80% of D_phi)
+  [213s]
+
+u = 3.500   R* = 0.7483  (seed 2003)
+  sigma_R (cycle-averaged)       0.014728   theory     0.015811   ratio  0.9315
+  sigma_R (boxcar-corrected)     0.015501   theory     0.015811   ratio  0.9804
+    within-cycle wobble          0.011849   (raw 0.018903, so wobble in R = 0.011849)
+  tau_R                            19.785   theory           20   ratio  0.9892
+  D_cor  (definition)          4.5484e-06   theory   4.7345e-06   ratio  0.9607
+  D_dir  (<1/R^2>)             2.2324e-05   theory   2.2321e-05   ratio  1.0001
+  D_phi  (intercept fit)       2.5778e-05   theory   2.7056e-05   ratio  0.9528
+  D_phi  (thru origin)         2.5847e-05   theory   2.7056e-05   ratio  0.9553
+  Var(J) intercept             0.00011546   predicted  -0.00042277   ratio -0.2731
+     of which wobble          -0.00023339   diffusive-only part  -0.00018938
+  quadratic residual            -0.015984  (fraction of linear term)
+  unexplained                 -1.0941e-06   = D_phi - D_cor - D_dir  (-4.24% of D_phi)
+  [213s]
+
+u = 6.370   R* = 1.0096  (seed 2001)
+  sigma_R (cycle-averaged)       0.014711   theory     0.015811   ratio  0.9304
+  sigma_R (boxcar-corrected)     0.015483   theory     0.015811   ratio  0.9792
+    within-cycle wobble          0.024394   (raw 0.028487, so wobble in R = 0.024394)
+  tau_R                             20.15   theory           20   ratio  1.0075
+  D_cor  (definition)          1.0604e-05   theory    1.077e-05   ratio  0.9846
+  D_dir  (<1/R^2>)             1.2273e-05   theory   1.2265e-05   ratio  1.0007
+  D_phi  (intercept fit)       2.1717e-05   theory   2.3034e-05   ratio  0.9428
+  D_phi  (thru origin)         2.1579e-05   theory   2.3034e-05   ratio  0.9368
+  Var(J) intercept            -0.00023208   predicted  -0.00078442   ratio  0.2959
+     of which wobble          -0.00035363   diffusive-only part  -0.00043079
+  quadratic residual             0.095787  (fraction of linear term)
+  unexplained                 -1.1597e-06   = D_phi - D_cor - D_dir  (-5.34% of D_phi)
+  [212s]
+
+u = 6.370   R* = 1.0096  (seed 2002)
+  sigma_R (cycle-averaged)       0.014647   theory     0.015811   ratio  0.9264
+  sigma_R (boxcar-corrected)     0.015416   theory     0.015811   ratio  0.9750
+    within-cycle wobble          0.024388   (raw 0.028449, so wobble in R = 0.024388)
+  tau_R                            20.232   theory           20   ratio  1.0116
+  D_cor  (definition)          9.9871e-06   theory    1.077e-05   ratio  0.9273
+  D_dir  (<1/R^2>)             1.2273e-05   theory   1.2265e-05   ratio  1.0007
+  D_phi  (intercept fit)       2.1586e-05   theory   2.3034e-05   ratio  0.9371
+  D_phi  (thru origin)          2.121e-05   theory   2.3034e-05   ratio  0.9208
+  Var(J) intercept            -0.00063352   predicted  -0.00078442   ratio  0.8076
+     of which wobble          -0.00035363   diffusive-only part  -0.00043079
+  quadratic residual              0.18679  (fraction of linear term)
+  unexplained                 -6.7415e-07   = D_phi - D_cor - D_dir  (-3.12% of D_phi)
+  [213s]
+
+u = 6.370   R* = 1.0096  (seed 2003)
+  sigma_R (cycle-averaged)       0.014691   theory     0.015811   ratio  0.9292
+  sigma_R (boxcar-corrected)     0.015462   theory     0.015811   ratio  0.9779
+    within-cycle wobble          0.024396   (raw 0.028479, so wobble in R = 0.024396)
+  tau_R                            20.501   theory           20   ratio  1.0250
+  D_cor  (definition)          1.0299e-05   theory    1.077e-05   ratio  0.9563
+  D_dir  (<1/R^2>)             1.2274e-05   theory   1.2265e-05   ratio  1.0008
+  D_phi  (intercept fit)       2.2486e-05   theory   2.3034e-05   ratio  0.9762
+  D_phi  (thru origin)         2.1749e-05   theory   2.3034e-05   ratio  0.9442
+  Var(J) intercept             -0.0012414   predicted  -0.00078442   ratio  1.5826
+     of which wobble          -0.00035363   diffusive-only part  -0.00043079
+  quadratic residual             0.096672  (fraction of linear term)
+  unexplained                 -8.6876e-08   = D_phi - D_cor - D_dir  (-0.39% of D_phi)
+  [212s]
+
+u=3.50  D_phi/th = 0.9750 1.0182 0.9528  mean 0.9820  s.d. 0.0332 (3.4%)  s.e.m 0.0192
+u=6.37  D_phi/th = 0.9428 0.9371 0.9762  mean 0.9520  s.d. 0.0211 (2.2%)  s.e.m 0.0122

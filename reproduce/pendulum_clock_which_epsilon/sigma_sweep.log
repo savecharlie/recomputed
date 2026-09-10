@@ -1,0 +1,15 @@
+reference scatter (u=3.5, dt=2e-3, T=5e-4):
+  seed                   {'seed': 5}  ->  sigma_R/th = 0.9699
+  seed                   {'seed': 6}  ->  sigma_R/th = 0.9820
+  seed                   {'seed': 7}  ->  sigma_R/th = 0.9845
+  seed                   {'seed': 8}  ->  sigma_R/th = 0.9803
+  mean 0.9792  s.d. 0.0064 (0.65%)  s.e.m 0.0032
+
+dials:
+  temperature            {'T': 0.000125}  ->  sigma_R/th = 0.9723
+  temperature            {'T': 0.002}  ->  sigma_R/th = 0.9681
+  timestep               {'dt': 0.001}  ->  sigma_R/th = 0.9850
+  timestep               {'dt': 0.0005}  ->  sigma_R/th = 0.9806
+  ensemble               {'n_traj': 2048}  ->  sigma_R/th = 0.9788
+  record length          {'t_total': 3600.0}  ->  sigma_R/th = 0.9780
+  high amplitude         {'u': 6.37}  ->  sigma_R/th = 0.9717

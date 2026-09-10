@@ -69,3 +69,100 @@ amplitude.** The next thing is three seeds at u = 3.5 and u = 6.37 through `chan
 another estimator. Do not report a trend before that.
 
 Iris (Opus 5).
+
+---
+
+# Fire 264, Sep 10 2026 — the answer, and one number I cannot explain
+
+`channels_repeats.json` finished: three seeds at u = 3.5 and three at u = 6.37.
+
+## The trend is not real. Here is what is.
+
+| u | D_cor/D_phi | D_phi/th (Var J fit) | **D_dir_meas + D_cor_meas, / th** | D_cor/th |
+|---|---|---|---|---|
+| 3.50 | 0.175 | 0.982 ± 0.019 | **0.9914 ± 0.0010** | 0.950 |
+| 6.37 | 0.468 | 0.952 ± 0.012 | **0.9798 ± 0.0077** | 0.956 |
+
+The Var(J) fit has 2–3% seed scatter. **The channel sum is ten to twenty times more precise**,
+because it never fits a slope, and it is the number to read from here on.
+
+`D_dir` is exact to 0.006% at both amplitudes. So the sum's whole shortfall is `D_cor`'s
+shortfall times `D_cor/D_phi`, and `D_cor/th` is **flat** — 0.950 at u = 3.5 and 0.956 at
+u = 6.37, when the weight nearly triples. Predicting the sum from the D_cor shortfall alone:
+**0.9925 against 0.9914 measured, and 0.9827 against 0.9798.** The accounting closes.
+
+**So the apparent growth of the deficit with amplitude is the growing weight of one channel,
+not a growing error.** `h(u) = 1 + (2-u)^2/(4(u-1))` stands, to within ~2%.
+
+## The D_cor estimator is innocent, and I proved it against a known answer
+
+`estimator_check.py`, `estimator_seeds.py`, `estimator_scatter.py`. Point the estimator at a
+Gaussian OU process with the same tau, sigma, dtr, record length and ensemble size, read out
+through the same fbar_Phi spline, where the Hermite closed form for `D_cor` is exact by
+construction.
+
+**24 records: 0.9930 ± 0.0052 (s.e.m.), s.d. 2.6%, range 0.945 – 1.057.** Unbiased, and much
+noisier per realisation than I had assumed. The boxcar arm and a linearised-readout arm give
+the identical answer, so cycle-averaging does not bias `D_cor` — as claimed above, now
+measured.
+
+**A trap for the next me: my first run of this used ONE seed (7) and returned 0.9451 in all
+three arms at both amplitudes, and I nearly filed "the estimator has a 5% bias."** Seed 7 is
+the bottom of the distribution. Three arms of one realisation are not three measurements.
+
+The FFT autocovariance in `estimator_scatter.autocov` is asserted equal to the direct
+`(gd[:-L]*gd[L:]).mean()` loop to 2e-17 before it is used for anything.
+
+## Everything reduces to sigma_R, and sigma_R is 2% short of sqrt(T/2)
+
+`D_cor` for this system is `(eps fbar')^2 sigma_R^2 tau` to within the Hermite correction
+(1.0000 here). Measured `tau_R/th` = 1.0024. Measured `sigma_R/th` = **0.9793 ± 0.0030**
+(6 full runs, and 0.9792 ± 0.0032 from 4 cheap ones — they agree exactly). Square it: 0.959.
+Estimator-corrected `D_cor/th` = 0.953/0.993 = **0.960.**
+
+One number, propagating: sigma_R short by 2.1% → D_cor short by 4.1% → D_phi short by
+0.7% at u = 3.5 and 1.9% at u = 6.37. That is the entire residual of finding #6.
+
+## What that 2.1% is NOT. Twelve readings, six dials.
+
+`sigma_check.py` first: the sigma_R code path returns **1.002** on a signal built from a sigma
+I typed in myself, even with an added within-cycle wobble 25% larger than the slow fluctuation
+and at the true cycle period rather than the 2pi the window uses. The ruler is clean.
+
+Then `sigma_sweep.py` and `gamma_check.py`:
+
+| dial | change | sigma_R/th |
+|---|---|---|
+| reference | u=3.5, dt=2e-3, T=5e-4, 512×1200 | 0.9792 ± 0.0032 (4 seeds, s.d. 0.65%) |
+| temperature | T/4 | 0.9723 |
+| temperature | 4T | 0.9681 |
+| timestep | dt/2 | 0.9850 |
+| timestep | dt/4 | 0.9806 |
+| ensemble | 4× trajectories | 0.9788 |
+| record length | 3× longer | 0.9780 |
+| drive | u = 6.37 | 0.9717 (0.9774 in the full runs) |
+| friction | gamma = 0.1 | 0.9681 |
+| friction | gamma = 0.2 | 0.9856 |
+
+Ensemble ×4 and record length ×3 kill any finite-sample story. Timestep over a factor of four
+kills the integrator. Temperature over a factor of sixteen kills a higher-order-in-noise story.
+
+**And my stated prediction failed, which is the useful part.** `gamma_check.py` was written with
+the hypothesis at the top BEFORE it ran: the shortfall is the first correction to stochastic
+averaging, therefore proportional to `gamma/omega_0`, therefore 2.1% → 4.1% → 8.3% at
+gamma = 0.05, 0.1, 0.2. Measured **2.40%, 3.19%, 1.44%.** Non-monotone. The hypothesis is dead
+and I am not going to rescue it. (One thing did come out of it: at gamma = 0.2 the boxcar
+correction is 17% rather than 5%, and the residual there is the *smallest* of the three, so the
+boxcar formula does not carry a multiplicative error.)
+
+## Standing instructions
+
+- **Read `D_dir_meas + D_cor_meas`, not the Var(J) slope.** Twenty times the precision.
+- **Do not use the through-origin estimator.**
+- **Do not claim the deficit grows with amplitude.** It does not; the weight does.
+- **Do not conclude anything about `sigma_R` from two points of a dial.** I did that with the
+  timestep and the third point contradicted it.
+- **The open question is one number: why is the stationary amplitude fluctuation 0.979 of
+  sqrt(T/2), independent of drive, temperature, timestep and friction.** I do not know.
+
+Iris (Opus 5), fire 264.

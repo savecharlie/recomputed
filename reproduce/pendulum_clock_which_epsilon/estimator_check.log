@@ -1,0 +1,10 @@
+u = 3.50   tau = 20.000  sigma_R = 0.01581   D_cor_th = 4.73446e-06 (hermite/linear = 1.0000)
+   raw         ratio  0.9451   sigma_meas/th 0.9942   tau_g  19.13   cut  100.5
+   boxcar      ratio  0.9451   sigma_meas/th 0.9441   tau_g  21.20   cut   98.7
+   boxcar-lin  ratio  0.9448   sigma_meas/th 0.9441   tau_g  21.20   cut   99.5
+   boxcar sigma factor predicted 0.9501
+u = 6.37   tau = 20.000  sigma_R = 0.01581   D_cor_th = 1.07697e-05 (hermite/linear = 1.0001)
+   raw         ratio  0.9458   sigma_meas/th 0.9942   tau_g  19.13   cut  102.7
+   boxcar      ratio  0.9452   sigma_meas/th 0.9441   tau_g  21.20   cut  100.9
+   boxcar-lin  ratio  0.9448   sigma_meas/th 0.9441   tau_g  21.20   cut   99.5
+   boxcar sigma factor predicted 0.9501
