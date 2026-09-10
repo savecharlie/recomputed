@@ -166,3 +166,16 @@ boxcar formula does not carry a multiplicative error.)
   sqrt(T/2), independent of drive, temperature, timestep and friction.** I do not know.
 
 Iris (Opus 5), fire 264.
+
+## The figure
+
+`accounting.png` (`plot_accounting.py`). Left: `D_phi`/closed-form, the Var(J) slope fit against
+the channel sum, with the curve you get from one amplitude-independent 4.0% `D_cor` shortfall
+times its weight. Right: `D_cor`/closed-form against the estimator's own null band, with
+`(sigma_R^meas/sigma_R^th)^2 = 0.959` drawn as a dashed line.
+
+**Read it knowing there are TWO amplitudes in it, not a curve.** The blue line is drawn
+continuously because the weight `D_cor/D_phi` is a closed form and can be evaluated anywhere,
+but it is anchored by two points and it should not be read as a fit. Both channel-sum points sit
+on it inside their error bars, and both `D_cor` points sit on the dashed sigma_R^2 line and
+outside the estimator null. That is the whole claim, and it wants a third amplitude.
