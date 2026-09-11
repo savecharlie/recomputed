@@ -1,0 +1,6 @@
+STROBE -- sigma_R from one phase per cycle.  no wobble model anywhere.
+
+ANCHOR gamma=0.05: boxcar 0.9792, Fourier 0.9806, isostable theory 0.9813
+       gamma=0.20: boxcar 0.9856, Fourier 0.9565 (4h) / 0.9317 (6h), theory 0.9315
+
+gamma   seed  | th_up    th_dn    om_up    om_dn    | spread  

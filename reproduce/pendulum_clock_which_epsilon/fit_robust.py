@@ -76,21 +76,22 @@ def fit(C, dtr, Om, tau, L0_cycles=1.0, nharm=4, mixed=False):
     return math.sqrt(max(best[0][1], 0.0))
 
 
-rows = []
-print("%-7s %-5s | %-9s %-9s %-9s %-9s" % ("gamma", "seed", "plain", "+mixed", "L0=2cyc", "harm=6"))
-for gamma, pred in ((0.05, 0.9813), (0.20, 0.9315)):
-    acc = {k: [] for k in ("plain", "mixed", "L0", "h6")}
-    for seed in (5, 6, 7):
-        C, dtr, Om, s_th, tau = sim(3.5, gamma, seed)
-        v = dict(plain=fit(C, dtr, Om, tau) / s_th,
-                 mixed=fit(C, dtr, Om, tau, mixed=True) / s_th,
-                 L0=fit(C, dtr, Om, tau, L0_cycles=2.0) / s_th,
-                 h6=fit(C, dtr, Om, tau, nharm=6) / s_th)
-        for k in acc:
-            acc[k].append(v[k])
-        print("%-7.2f %-5d | %-9.4f %-9.4f %-9.4f %-9.4f"
-              % (gamma, seed, v['plain'], v['mixed'], v['L0'], v['h6']), flush=True)
-    print("%-7.2f %-5s | %-9.4f %-9.4f %-9.4f %-9.4f   <- mean   (isostable predicts %.4f)"
-          % (gamma, "mean", *[np.mean(acc[k]) for k in ("plain", "mixed", "L0", "h6")], pred))
-    rows.append(dict(gamma=gamma, predicted=pred, **{k: acc[k] for k in acc}))
-json.dump(rows, open('fit_robust.json', 'w'), indent=1)
+if __name__ == "__main__":
+    rows = []
+    print("%-7s %-5s | %-9s %-9s %-9s %-9s" % ("gamma", "seed", "plain", "+mixed", "L0=2cyc", "harm=6"))
+    for gamma, pred in ((0.05, 0.9813), (0.20, 0.9315)):
+        acc = {k: [] for k in ("plain", "mixed", "L0", "h6")}
+        for seed in (5, 6, 7):
+            C, dtr, Om, s_th, tau = sim(3.5, gamma, seed)
+            v = dict(plain=fit(C, dtr, Om, tau) / s_th,
+                     mixed=fit(C, dtr, Om, tau, mixed=True) / s_th,
+                     L0=fit(C, dtr, Om, tau, L0_cycles=2.0) / s_th,
+                     h6=fit(C, dtr, Om, tau, nharm=6) / s_th)
+            for k in acc:
+                acc[k].append(v[k])
+            print("%-7.2f %-5d | %-9.4f %-9.4f %-9.4f %-9.4f"
+                  % (gamma, seed, v['plain'], v['mixed'], v['L0'], v['h6']), flush=True)
+        print("%-7.2f %-5s | %-9.4f %-9.4f %-9.4f %-9.4f   <- mean   (isostable predicts %.4f)"
+              % (gamma, "mean", *[np.mean(acc[k]) for k in ("plain", "mixed", "L0", "h6")], pred))
+        rows.append(dict(gamma=gamma, predicted=pred, **{k: acc[k] for k in acc}))
+    json.dump(rows, open('fit_robust.json', 'w'), indent=1)
