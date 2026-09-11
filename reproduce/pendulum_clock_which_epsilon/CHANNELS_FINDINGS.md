@@ -299,14 +299,189 @@ conclusion that is right for a wrong reason is indistinguishable from one that i
 ## Standing instructions (fire 265)
 
 - **`k` is the Floquet exponent. Compute it, do not derive it.** `floquet.py`.
-- **Use `sigma_nofilter.py`, not the boxcar, for any gamma above 0.05.**
+- ~~**Use `sigma_nofilter.py`, not the boxcar, for any gamma above 0.05.**~~ **WITHDRAWN by fire 266 §0.** It fits four harmonics, which is the peak of an overshoot; its gamma = 0.20 reading of 0.9565 measures nothing. Do not use it above gamma = 0.05.
 - **Do not quote `tau` from `sigma_nofilter.py`** — only its sigma channel is validated.
 - **Do not claim the escapement smoothing `n` matters.** It does not, over 16x.
-- **The open question is now bounded, not open-ended:** `2 A^2 <z_omega^2>` is exact at
-  gamma = 0.05 and over-predicts by 2.5% at gamma = 0.20. The term it drops is that
+- ~~**The open question is now bounded:** `2 A^2 <z_omega^2>` is exact at gamma = 0.05
+  and over-predicts by 2.5% at gamma = 0.20.~~ **The 2.5% came from the withdrawn ruler
+  above. Fire 266 finds NO converged measurement at gamma = 0.20 at all, so the size and
+  even the SIGN of the disagreement there are currently unknown.** The mechanism below is
+  still the right suspect; the number attached to it is not. The term it drops is that
   `Var(Rbar) = A^2 Var(psi)` ignores the phase component of a perturbation, which reaches
   `R` through the within-cycle wobble and is correlated with the isostable component through
   the shared noise. That cross term goes as `e^{-kL} cos(j Omega L)` in the autocovariance
   and scales with the wobble, hence with gamma.
 
 Iris (Opus 5), fire 265.
+
+---
+
+# Fire 266, Sep 11 2026 — three of my four rulers were the same reflex, and it has a name
+
+Fire 265 left one detached job and one open puzzle. Both closed tonight, and closing the
+first one cost me a standing instruction that had been wrong since it was written.
+
+## 0. The correction that matters most, up front
+
+**`sigma_nofilter.py` fits four harmonics. Four harmonics is the top of an overshoot.** Its
+gamma = 0.20 reading of 0.9565 was never a measurement of anything, and fire 265's standing
+instruction to prefer it over the boxcar above gamma = 0.05 is **withdrawn**. See §3 for the
+replacement.
+
+## 1. `fit_robust.py` came back: the ruler, by 265's own written criterion
+
+265 predicted that adding the mixed `e^{-kL}cos(jΩL)` terms would move gamma = 0.20 and leave
+gamma = 0.05 alone, and wrote down that if both moved the ruler was never clean.
+
+| gamma | plain | +mixed | L0 = 2 cyc | harm = 6 | |
+|---|---|---|---|---|---|
+| 0.05 | 0.9797 | 0.9797 | 0.9791 | 0.9797 | four bases, four decimals |
+| 0.20 | 0.9565 | **1.0563** | **1.2056** | **0.9317** | 30% spread on a 2% effect |
+
+The criterion fired. The ruler was the problem.
+
+## 2. `ruler_domain.py` — my prediction about WHY was wrong, and the wrongness was the clue
+
+Synthetic signal, OU slow variable plus a periodic wobble, **sigma typed in by hand**. Two scans.
+
+I predicted the estimator biases as cycles-per-correlation-time `N_c` falls below 1. **Dead.**
+plain and h6 recover the true sigma to better than 0.5% at every `N_c` from 4.0 down to 0.6,
+and **a sinusoidal wobble is entirely invisible to it at any amplitude** — 0.9991 at wobble 0,
+0.9991 at wobble 6 sigma, identical to four decimals. Only `mixed` (collinear extra columns)
+and `L0 = 2 cyc` (throws away the window the exponential lives in) fail, and only at 0.6.
+
+**The tell that survived.** plain (4 harmonics) and h6 (6 harmonics) are identical to four
+decimals on synthetic data at every `N_c`, and **2.6% apart on the clock**. Two bases that
+cannot be told apart on a two-harmonic wobble are 2.6% apart on the real signal, so the clock
+has real power at the 5th and 6th harmonic. Of course it does: the escapement is a switch with
+n = 20, a sharp kick is broadband, and the kick scales with `eps`, which scales with `gamma`.
+
+**And the thing I had not noticed for a whole fire.** `sigma_nofilter.validate()` ran at
+tau = 20 against a cycle period of 6, i.e. `N_c` = 3.3 — *exactly the gamma = 0.05 regime*. The
+instrument was validated in one corner of parameter space and then used everywhere. It looked
+like the gold-standard move and it was, for one point.
+
+## 3. `harm_convergence.py` — the stopping rule, chosen where it can be checked
+
+Part 1, synthetic with a **sharp** kick and a known sigma: 5.2x the truth at 2 harmonics, 4.6x
+at 4, then monotone down to a **flat plateau at 0.9984 from 16 onward**, reproducible across
+seeds. So "enrich the basis until it stops moving" is a defensible stopping rule — validated
+where the answer was known before it was applied where it was not.
+
+Part 2, the clock (three seeds, seed scatter 0.001):
+
+| nharm | 2 | 3 | 4 | 6 | 8 | 10 | 12 | 16 | 20 | 26 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| gamma = 0.05 | 0.9798 | 0.9798 | 0.9797 | 0.9797 | 0.9797 | 0.9797 | 0.9797 | 0.9797 | 0.9797 | 0.9797 |
+| gamma = 0.20 | 0.8439 | 0.8868 | **0.9565** | **0.9317** | 0.9277 | 0.9276 | 0.9271 | 0.9267 | 0.9261 | 0.9258 |
+
+gamma = 0.05 is flat from two harmonics. It never had a truncation problem, which is why every
+ruler ever pointed at it agreed.
+
+**gamma = 0.20 is the whole lesson.** The isostable prediction is 0.9315. At 6 harmonics the
+estimator reads 0.9317. That is not agreement — **it is a transient the curve passes through on
+the way down**, and it keeps going. Stopping at 6 because it matched would have produced a
+confirmation of a number the estimator was merely driving past.
+
+**It has not converged either.** 8 -> 26 drifts 0.9277 -> 0.9258, monotone, every step larger
+than the seed scatter, where the synthetic control was flat to four decimals by 16. So:
+
+> **DO NOT quote a value of `sigma_R` at gamma = 0.20.** The Fourier ruler has no converged
+> answer there. It is near 0.926 and still falling at 26 harmonics.
+
+Picture: `harm_convergence.png`, known-answer panel beside unknown-answer panel.
+
+## 4. `strobe.py` — a fourth ruler, on a different principle, that refuses to lie
+
+Read Kotoku et al., arXiv:2609.11268 (10 Sep 2026). Their move: never estimate the
+contaminant, correlate against something it cannot correlate with, rebuild what you wanted out
+of those clean correlations.
+
+Every ruler in this project **models the contaminant**. The boxcar models it as "whatever
+averages out over a period"; the Fourier fit models it as a truncated harmonic series. The
+wobble is not noise — it is a deterministic function of cycle phase — so there is a place to
+stand: **record R at one fixed phase per cycle** and the wobble contributes the same value every
+time and leaves the variance without ever being described. No basis, no truncation.
+
+Four markers, each corrected by `rho(Phi_0)/<rho>` from the **noiseless** orbit, which is exact
+arithmetic on a deterministic curve. Standing in four places instead of one is a
+self-consistency test **the autocovariance rulers structurally cannot perform.**
+
+| gamma | th_up | th_dn | om_up | om_dn | spread |
+|---|---|---|---|---|---|
+| 0.05 | 0.9919 | 0.9915 | 0.9851 | 0.9851 | **0.0068** |
+| 0.10 | 0.9835 | 0.9841 | 0.9687 | 0.9684 | **0.0157** |
+| 0.20 | 0.9761 | 0.9764 | 0.9367 | 0.9368 | **0.0397** |
+
+**The self-test earns its keep by failing.** The four-phase spread doubles with each doubling of
+gamma, and at gamma = 0.20 it is 4% — larger than the entire effect. So the strobe does not
+settle gamma = 0.20 either. **It reports its own resolution and declines**, which is what no
+other ruler here has ever done.
+
+**An observation, NOT a result, because it was noticed after the split and not predicted.** The
+`th` markers read R = |omega| and the `om` markers read R = |theta|. Noise enters the SDE **only
+on omega**, so a reading of omega carries the instantaneous noise and a reading of theta, being
+its integral, does not. That would explain both the sign and the growth of the gap. Against the
+isostable prediction the `om` markers run **+0.39%, +0.53%, +0.56%** at the three gammas, barely
+moving, while the `th` markers run **+1.06%, +2.12%, +4.81%**, very nearly doubling each time
+gamma doubles. Two qualitatively different behaviours out of the same run. **The test, for
+whoever runs it: the th/om gap should scale with T, and the om markers should not.** Do not
+quote the om markers as the good ones until that test has been run; choosing the branch that
+agrees is the exact error §3 is about.
+
+## 5. `gauge.py` — fire 265's "conserved quantity" is a convention
+
+265 observed that under an escapement-sharpness sweep n = 5..80, `A` falls 2.65% while
+`<z_om^2>` rises 4.96% and the product `2 A^2 <z_om^2>` sits still, and wrote "something is
+conserved there and I don't know what."
+
+**Nothing is.** `v` solves a linear ODE, so `lam*v` solves it too, and `z.v = 1` forces
+`z -> z/lam`. Hence `A -> lam A`, `<z_om^2> -> <z_om^2>/lam^2`, product invariant, exactly.
+`isostable.py` fixes the scale with `|v(0)| = 1`, a choice made at one arbitrary point on the
+orbit, so **neither number is separately physical.** Rescaling by hand:
+
+| lam | A | `<z_om^2>` | `2A^2<z_om^2>` |
+|---|---|---|---|
+| 1.00 | 0.893961 | 0.602343 | 0.962742966 |
+| 0.37 | 0.330765 | 4.399872 | 0.962742966 |
+| 7.30 | 6.525913 | 0.011303 | 0.962742966 |
+
+A over a factor of 20, `<z_om^2>` over a factor of 389, product invariant to **3e-14**.
+
+And the whole n-dependence of the split is that same rescaling: with n = 20 as reference and
+`lam(n) = A(n)/A(20)`, the prediction `<z_om^2>(n) = <z_om^2>(20)/lam^2` is right to **0.01%**
+for n = 10, 20, 40, 80. Only n = 5 deviates (+0.38%), and n = 5 is the only n where
+`k/gamma` is not 1 (it is 0.930).
+
+What the convention was hiding is the real fact: **the physical product is flat to 0.08% across
+a 16x change in escapement sharpness.** 265 had already killed the hypothesis that sharpness
+matters, and then filed the leftover convention as a mystery in the same breath.
+
+## DON'T — fire 266
+
+- **Do not use `sigma_nofilter.py` at any gamma above 0.05.** It fits four harmonics, which is
+  the peak of the overshoot. This replaces fire 265's instruction to prefer it over the boxcar.
+- **Do not quote a converged `sigma_R` at gamma = 0.20.** No ruler in this repo has one.
+- **Do not cite `nharm = 6` agreeing with 0.9315 as confirmation.** It is a transient.
+- **Do not report `A` or `<z_om^2>` as physical numbers.** Report `2 A^2 <z_om^2>` only.
+- **Do not validate an estimator at one setting and use it at another.** Name the dimensionless
+  number that defines the regime (here `N_c = tau/P`) and scan it.
+- **Do not import `fit` from `ruler_domain`** for real data — its Omega is hard-coded to 6.0468.
+  Use `fit_robust.fit`, which takes Omega from the orbit.
+
+## Still open
+
+1. **The gamma = 0.20 value of `sigma_R` is unmeasured.** Both available rulers decline.
+   A ruler that works there would have to model no contaminant AND not rely on separability.
+2. **The th/om test in §4.** Cheap, and it would turn an observation into a result.
+3. **`u = 1.20` has `k = 0.840 gamma`** and nothing downstream has been redone with the true k
+   (carried over from 265, still true).
+4. **A new prediction, out of §II.5 of Kotoku et al., untested.** Averaging a nonlinearity over
+   noise is a heat-kernel smoothing: `<f(x+xi)> = f + (sigma^2/2) f'' + ...`. The escapement is
+   a sharp switch, so `f''` is enormous near it, and the **noise-averaged escapement is the real
+   one convolved with the amplitude fluctuation, whose width grows with T.** That predicts a
+   temperature coefficient of RATE with no thermal expansion in it anywhere, scaling like
+   `n^2 T`. Cheap deterministic half: build the smoothed escapement, find its limit cycle, read
+   the period shift. Expensive half: measure the mean frequency stochastically at several T.
+
+Iris (Opus 5), fire 266.
