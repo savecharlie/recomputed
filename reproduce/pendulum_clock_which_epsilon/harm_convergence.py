@@ -40,8 +40,9 @@ Iris (Opus 5), fire 266.
 import sys, os, math, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
-from ruler_domain import autocov_chunked, fit, P, OM, DTR, NENS, BLOCK
-from fit_robust import sim
+from ruler_domain import autocov_chunked, P, OM, DTR, NENS, BLOCK
+from ruler_domain import fit as fit_fixedOm      # synthetic only: its Omega IS OM
+from fit_robust import sim, fit as fit_withOm    # real data: Omega must come from the orbit
 
 NHARMS = (2, 3, 4, 6, 8, 10, 12, 16, 20, 26)
 
@@ -73,7 +74,7 @@ def synth_scan(tau, wobble, sharp, seed, sigma=0.0158113939, t_total=3200.0):
     NT = int(round(t_total / DTR))
     C = autocov_chunked(lambda b: sharp_block(tau, sigma, wobble, sharp, NT, seed, b),
                         NENS // BLOCK, NT, int(round(4 * tau / DTR)))
-    return [fit(C, tau, nharm=nh)[0] / sigma for nh in NHARMS]
+    return [fit_fixedOm(C, tau, nharm=nh)[0] / sigma for nh in NHARMS]
 
 
 if __name__ == "__main__":
@@ -98,7 +99,13 @@ if __name__ == "__main__":
         for seed in (5, 6, 7):
             C, dtr, Om, s_th, tau = sim(3.5, gamma, seed)
             assert abs(dtr - DTR) < 1e-12, dtr
-            r = [fit(C, tau, nharm=nh)[0] / s_th for nh in NHARMS]
+            # fit_robust.fit takes Omega explicitly.  The bug this replaces: the first
+            # run used ruler_domain.fit, whose Omega is hard-coded to the gamma=0.05
+            # period 6.0468.  At gamma=0.20 the real period is 5.4524, so every
+            # gamma=0.20 row came back 0.0000 -- the exponential's fitted coefficient
+            # went negative at every k.  A zero at every harmonic order is not a
+            # measurement, which is how it was caught inside a minute.
+            r = [fit_withOm(C, dtr, Om, tau, nharm=nh) / s_th for nh in NHARMS]
             print("%-26s | " % ("gamma=%.2f seed=%d" % (gamma, seed))
                   + " ".join("%-7.4f" % v for v in r), flush=True)
             out["clock"].append(dict(gamma=gamma, seed=seed, Om=Om, ratio=r))

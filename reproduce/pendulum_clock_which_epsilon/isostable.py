@@ -69,7 +69,13 @@ def rk4_orbit(esc, gamma, eps, Rstar, dt, n_cyc=80):
     return np.array(traj)
 
 
-def analyse(u, dt=2e-4, verbose=True):
+def analyse(u, dt=2e-4, verbose=True, lam=1.0):
+    """lam rescales the right Floquet vector v -> lam*v (and so z -> z/lam).
+
+    It exists to make a point checkable rather than merely argued: |v(0)| = 1 is a
+    CONVENTION, so A and <z_om^2> are separately meaningless and only their product is
+    physical.  See gauge.py.  Default 1.0 leaves every existing result untouched.
+    """
     eps = math.pi * GAMMA * THETA_R * u / 4.0
     esc = Grasshopper(THETA_R, N)
     Rstar = limit_cycle_radius(esc, GAMMA, eps)
@@ -92,7 +98,7 @@ def analyse(u, dt=2e-4, verbose=True):
     j = int(np.argmax(np.abs(ev - 1.0)))          # the non-trivial multiplier
     mu = float(np.real(ev[j]))
     k = -math.log(abs(mu)) / P
-    v0 = np.real(R_[:, j]); v0 /= np.linalg.norm(v0)
+    v0 = np.real(R_[:, j]); v0 /= np.linalg.norm(v0); v0 *= lam
     L = np.linalg.inv(R_)
     z0 = np.real(L[j, :])
     z0 = z0 / float(z0 @ v0)                       # z.v = 1

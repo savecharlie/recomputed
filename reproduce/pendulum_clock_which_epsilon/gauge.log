@@ -1,0 +1,24 @@
+PART 1 -- rescale v by hand.  A and <z_om^2> must move; the product must not.
+
+lam      A            <z_om^2>     2A^2<z_om^2>   sigma ratio 
+1.00     0.893961     0.602343     0.962742966    0.981195       (product/base - 1 = +0.00e+00)
+0.37     0.330765     4.399872     0.962742966    0.981195       (product/base - 1 = +2.86e-14)
+7.30     6.525913     0.011303     0.962742966    0.981195       (product/base - 1 = +3.26e-14)
+
+
+PART 2 -- is the n-dependence of the split the SAME rescaling?
+         reference n = 20.  lam(n) := A(n)/A(20).  predict <z_om^2>(n) = <z_om^2>(20)/lam^2.
+
+n      A          <z_om^2>   2A^2<zom^2> sigma rat.  | lam        predicted   err %     k_true/g 
+5.0    0.913606   0.578927   0.966434    0.981568    | 1.021976   0.576717       +0.383 0.9304   
+10.0   0.907599   0.584323   0.962657    0.981208    | 1.015257   0.584375       -0.009 0.9981   
+20.0   0.893961   0.602343   0.962743    0.981304    | 1.000000   0.602343       +0.000 0.9998   
+40.0   0.891079   0.605766   0.961983    0.980738    | 0.996777   0.606245       -0.079 1.0001   
+80.0   0.889982   0.607660   0.962616    0.981238    | 0.995549   0.607741       -0.013 0.9998   
+
+   across n = 5..80 (a 16x change in escapement sharpness):
+      A            spans  2.654 %   <- gauge-dependent, not physical
+      <z_om^2>     spans  4.963 %   <- gauge-dependent, not physical
+      2A^2<zom^2>  spans  0.463 %   <- the physical answer
+      ... n >= 10  spans  0.079 %   <- n = 5 is the only outlier, and it is also the
+                                       only n where k/gamma is not 1 (0.930)
