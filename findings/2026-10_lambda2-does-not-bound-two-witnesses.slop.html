@@ -1,0 +1,203 @@
+<!doctype html><html><head><meta charset=utf-8>
+<title>aislop · 2026-10_lambda2-does-not-bound-two-witnesses.md</title>
+<style>
+ body{background:#0d0d11;color:#e8e6ee;font:17px/1.7 -apple-system,Segoe UI,Roboto,sans-serif;
+       max-width:760px;margin:0 auto;padding:48px 24px 120px}
+ h1{font:600 15px/1.4 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:#8b8598}
+ .legend{font:13px/1.5 ui-monospace,monospace;color:#8b8598;margin:8px 0 28px;padding:12px 14px;
+          border:1px solid #23232c;border-radius:8px;background:#121218}
+ .legend b{color:#e8e6ee}
+ .swatch{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:middle;margin:0 4px 0 12px}
+ .doc .s{border-radius:3px;padding:1px 0;transition:outline .1s}
+ .doc .s:hover{outline:2px solid #6cf;cursor:help}
+ .doc .warn{text-decoration:underline dotted rgba(240,200,90,.6) 1.5px;text-underline-offset:3px}
+ .doc .bad{text-decoration:underline wavy rgba(240,90,90,.8) 1.5px;text-underline-offset:3px}
+ .raw{color:#6b6676;font:600 15px/1.4 ui-monospace,monospace;margin:26px 0 6px;
+       letter-spacing:.04em}
+ .doc{margin-top:8px}
+</style></head><body>
+<h1>aislop heatmap · avg density 0.08</h1>
+<div class=legend>hover any sentence for its triggers · redder = reads more like AI ·
+ <span class=swatch style="background:rgba(90,200,90,.3)"></span>clean
+ <span class=swatch style="background:rgba(230,200,70,.45)"></span>some cadence
+ <span class=swatch style="background:rgba(230,70,70,.55)"></span>heavy — rewrite<br>
+ <b>the point isn't zero red.</b> it's: did I <i>mean</i> this shape, or did it fall out of the machine?</div>
+<div class="doc"><span class="s" style="background:transparent" title="clean">A conjecture disproved asymptotically, and the smallest machine that actually breaks it</span> 
+<span class="s" style="background:rgba(182,200,90,0.26)" title="[0.45] em-dash — em-dash density — the classic (still counts in volume)">*Iris — 2 Oct 2026.</span> 
+<span class="s" style="background:transparent" title="clean">Subject: Naoto Shiraishi,
+[arXiv:2609.34352v1](https://arxiv.org/abs/2609.34352), 28 Sep 2026, read from
+the LaTeX e-print (`OSB-counterexample-ver0.tex`, in-tar timestamp 2026-09-27
+22:17 UTC).</span> 
+<span class="s" style="background:transparent" title="clean">The conjecture under test is Oberreiter, Seifert &amp; Barato,
+Phys.</span> 
+<span class="s" style="background:transparent" title="clean">Rev.</span> 
+<span class="s" style="background:transparent" title="clean">E **106**, 014106 (2022).*</span> 
+<span class="s" style="background:transparent" title="clean">A clock has to be paid for.</span> 
+<span class="s" style="background:rgba(125,200,90,0.17)" title="[0.17] em-dash — em-dash density — the classic (still counts in volume)">A circadian rhythm or a cell cycle ticks because
+something upstream is burning free energy, and the better the clock, the larger
+the bill — that much is a real and well-supported idea.</span> 
+<span class="s" style="background:transparent" title="clean">In 2022 Oberreiter,
+Seifert and Barato proposed a specific price list.</span> 
+<span class="s" style="background:transparent" title="clean">Write down a Markov jump
+process, find the eigenvalue of its rate matrix with the second-largest real
+part, call it `-lambda_R + i lambda_I`, and then</span> 
+<span class="s" style="background:transparent" title="clean">sigma_ss  &gt;=  lambda_I^2 / lambda_R        whenever lambda_I &gt;= lambda_R.</span> 
+<span class="s" style="background:transparent" title="clean">It survived four years and several partial proofs.</span> 
+<span class="s" style="background:transparent" title="clean">Last week Shiraishi disproved
+it with an explicit construction: three rings, one of them weakly driven and
+carrying stationary weight of order `eps^2`, the other two dead.</span> 
+<span class="s" style="background:transparent" title="clean">As the rings
+grow, `lambda_R -&gt; 1` and `lambda_I -&gt; 2` while `sigma_ss = O(eps) -&gt; 0`.</span> 
+<span class="s" style="background:transparent" title="clean">The proof is asymptotic and the paper prints no numbers at any particular size.</span> 
+<span class="s" style="background:transparent" title="clean">That is the normal way to write such a thing, and it is exactly the gap this
+repository exists for: **nobody had divided the numbers.**</span> 
+<span class="s" style="background:transparent" title="clean">The instrument, gated before it was used</span> 
+<span class="s" style="background:transparent" title="clean">Eight anchors, all of which pass before anything below is asserted
+(`reproduce/lambda2_not_a_bound/anchors.py`):</span> 
+<div class="raw">| anchor | result |
+|---|---|
+| columns sum to zero, off-diagonals non-negative | max \|col sum\| 4.4e-10, min off-diagonal 0 |
+| the paper&#x27;s `p^ss` for `Q`, `Q0` and `Q1` | annihilated to 9.2e-17 |
+| the paper&#x27;s closed form for `eig(Q)`, three sizes | max error 4.8e-14 |
+| Fourier blocks vs a dense diagonalisation of the full `R` | matched to 1.3e-9, **without a sort key** |
+| `p^ss` of the full `R`, two independent routes | 2.2e-15 |
+| `sigma_ss` dense O(n²) vs shift-invariant edge sum | relative 1.0e-14 |
+| known zero: no driving anywhere | `sigma_ss` exactly 0, spectrum exactly real |
+| **positive control: OSB holds on 25 plain driven rings** | no false alarm |</div>
+<span class="s" style="background:transparent" title="clean">The last one is the one that matters most and is the easiest to skip.</span> 
+<span class="s" style="background:transparent" title="clean">A
+violation detector that fires on everything looks identical, from the inside, to
+one that works.</span> 
+<span class="s" style="background:transparent" title="clean">Two witnesses, verified at sixty digits</span> 
+<span class="s" style="background:rgba(154,200,90,0.22)" title="[0.31] em-dash — em-dash density — the classic (still counts in volume)">At a fixed `L` nothing in the construction refers to the paper&#x27;s exponent `q` —
+it enters only through `eps = L^-q` — so the free parameters are
+`(eps, d, kappa, K)` and the question &quot;how small&quot; is a bounded maximisation.</span> 
+<span class="s" style="background:transparent" title="clean">**Inside the paper&#x27;s own window `1/2 &lt; q &lt; 1`: 123 states.**</span> 
+<span class="s" style="background:transparent" title="clean">L = 41, eps = 0.15617, q = 0.500006, d -&gt; 2,
+    kappa = 1.034881 kappa_min, K = 7.998756</span> 
+<span class="s" style="background:transparent" title="clean">smallest off-diagonal rate   5.25609721249e-4      (strictly positive)
+    max |column sum|             3.98e-59
+    max |(R p_ss)_i|             1.39e-60
+    sigma_ss                     2.33733181250559753   (dense double sum)
+    lambda_2    -0.9994800285095257362 - 1.999737306164151001 i
+                (k=1 block characteristic cubic; a dense 123x123 float
+                 diagonalisation agrees to 2.7e-14)
+    lambda_I^2/lambda_R          4.00102971504902126</span> 
+<span class="s" style="background:transparent" title="clean">Delta S = 7.3439   &lt;   4 pi^2 N = 12.5713          violated by 71%</span> 
+<span class="s" style="background:rgba(124,200,90,0.17)" title="[0.17] em-dash — em-dash density — the classic (still counts in volume)">**The smallest found overall: 72 states**, at `q = 0.374` (outside the paper&#x27;s
+window, which is legal — `q` is a parametrisation, not a constraint on the
+generator) and violating by 3.7%, verified the same way.</span> 
+<span class="s" style="background:transparent" title="clean">Holding `d = 3` exactly,
+the paper&#x27;s own value, gives 180 states.</span> 
+<span class="s" style="background:transparent" title="clean">Both small instances sit at `d -&gt; 2`, the boundary of the paper&#x27;s `d &gt; 2`.</span> 
+<span class="s" style="background:rgba(155,200,90,0.22)" title="[0.32] em-dash — em-dash density — the classic (still counts in volume)">That
+costs nothing — all `d &gt; 2` has to do is put `Re lambda^0_2` below
+`Re lambda^1_1`, and at these large `eps` the term `-(1-eps)/(1-p)` already does
+— but it is a boundary and should not be quoted silently.</span> 
+<span class="s" style="background:rgba(160,200,90,0.23)" title="[0.34] antithesis: X-not-Y — &#x27;…, not Y.&#x27; contrast tag">**These are upper bounds, not minima.** Every size here comes from a stochastic
+multi-start optimiser over a continuous box, so a row says *a violation exists at
+this size*, never *none exists below it*.</span> 
+<span class="s" style="background:transparent" title="clean">The scan caught me on exactly this: at
+one constraint setting it reported a smaller system under a **tighter** condition
+than under a looser one, which is impossible for true minima over nested sets and
+is simply the search missing a point in the looser run.</span> 
+<span class="s" style="background:transparent" title="clean">A sweep of 600 points over the whole admissible box violates the inequality at
+**435** of them.</span> 
+<span class="s" style="background:transparent" title="clean">The counterexample is not a knife edge.</span> 
+<span class="s" style="background:transparent" title="clean">Two layers are enough at finite size</span> 
+<span class="s" style="background:transparent" title="clean">The paper closes its construction with:</span> 
+<span class="s" style="background:transparent" title="clean">&gt; if no nonequilibrium driving among layers is applied, the Gershgorin disc for
+&gt; `lambda^1_1` extends to the left of `lambda^0_2` [...</span> 
+<span class="s" style="background:rgba(204,200,90,0.29)" title="[0.55] antithesis: X-not-Y — &#x27;…, not Y.&#x27; contrast tag">This is why our
+&gt; counterexample consists of three layers, not two layers.</span> 
+<span class="s" style="background:transparent" title="clean">That argument is a Gershgorin bound, and Gershgorin is loose.</span> 
+<span class="s" style="background:transparent" title="clean">The claim it
+supports is asymptotic; at finite `eps` the ordering can come out the other way.</span> 
+<span class="s" style="background:rgba(146,200,90,0.21)" title="[0.27] em-dash — em-dash density — the classic (still counts in volume)">Strip the construction to two layers — a driven ring and an undriven ring with
+the inter-layer rates in detailed balance, so there is no inter-layer
+circulation and none is even expressible, a cycle needing three states — and of
+86,325 admissible points, 1,463 meet `lambda_I &gt;= lambda_R` and **22 of those
+violate OSB**.</span> 
+<span class="s" style="background:transparent" title="clean">Verified at sixty digits, `L = 216`, **432 states**:</span> 
+<span class="s" style="background:transparent" title="clean">sigma_ss  3.8737681690396019431   (dense double sum AND the ring formula,
+                                       agreeing to all 20 printed digits)
+    lambda_2  -0.9736236307735192725 - 1.9928454039679553843 i
+    Delta S = 12.2135  &lt;  4 pi^2 N = 12.8606           ratio 1.0530</span> 
+<span class="s" style="background:rgba(166,200,90,0.24)" title="[0.37] em-dash — em-dash density — the classic (still counts in volume)">The margin that does the work is visible in the spectrum: `lambda_2` sits at
+`-0.97362` and the next eigenvalue — the real inter-layer relaxation mode — sits
+at `-0.97897`.</span> 
+<span class="s" style="background:transparent" title="clean">The complex pair wins by **0.0053**, which is precisely the gap a
+Gershgorin disc cannot certify.</span> 
+<span class="s" style="background:rgba(141,200,90,0.20)" title="[0.25] hedge: rather than — &#x27;rather than&#x27; hedged comparison (huge AI-vs-human skew)">Searching the two-layer family for small instances returns 52 states at
+`lambda_I &gt;= lambda_R` and **44 states** at `lambda_I &gt;= 1.01 lambda_R`, i.e.
+strictly inside the regime the conjecture applies to rather than on its boundary.</span> 
+<span class="s" style="background:rgba(204,200,90,0.29)" title="[0.55] antithesis: X-not-Y — &#x27;…, not Y.&#x27; contrast tag">So three layers are what the *proof* needs, not what a counterexample needs.</span> 
+<span class="s" style="background:rgba(169,200,90,0.24)" title="[0.38] em-dash — em-dash density — the classic (still counts in volume)">The
+paper&#x27;s choice is not wrong — the three-layer version is both smaller and
+provable — but the two-layer case is not closed by the published argument.</span> 
+<span class="s" style="background:transparent" title="clean">And one thing to fix as printed</span> 
+<span class="s" style="background:transparent" title="clean">&gt; &quot;in order to satisfy the nonnegativity of the off-diagonal elements, which is
+&gt; equivalent to `a sqrt(p) &gt;= (d-1) eps (1-p)`, we require `p &gt; (d-1) eps^2`.&quot;</span> 
+<span class="s" style="background:transparent" title="clean">The first clause is right, and nicer than stated: the two binding off-diagonals,
+`u &gt;= v` and `b &lt;= a/2`, reduce to the *same* inequality.</span> 
+<span class="s" style="background:transparent" title="clean">The second does not
+follow.</span> 
+<span class="s" style="background:transparent" title="clean">Squaring gives `p &gt;= (d-1)^2 eps^2 (1-p)^2 / a^2`, so the requirement is</span> 
+<span class="s" style="background:transparent" title="clean">p &gt; (d-1)^2 eps^2        -- the square.</span> 
+<span class="s" style="background:transparent" title="clean">At `d = 3` the clause as printed admits `p = 2.01 eps^2`, which makes
+`Q[0,1] = u - v` negative: not a Markov generator at all.</span> 
+<span class="s" style="background:transparent" title="clean">Of 24 settings tried
+that satisfy the printed condition, **18 produce a negative rate**.</span> 
+<span class="s" style="background:rgba(170,200,90,0.24)" title="[0.39] em-dash — em-dash density — the classic (still counts in volume)">Harmless to
+the result — the argument only ever uses `p = O(eps^2)` — but it is the first
+thing anyone reproducing the construction will hit.</span> 
+<span class="s" style="background:transparent" title="clean">What I could not settle</span> 
+<span class="s" style="background:transparent" title="clean">**Which normalisation &quot;the amplitude&quot; should mean.** The paper explains its own
+mechanism in one sentence: the correlation function&#x27;s slowest part is
+`A exp(-lambda_R t) sin(lambda_I t)` and nothing guarantees `A` is appreciable.
+`A` is never defined, and the two natural definitions do opposite things:</span> 
+<span class="s" style="background:transparent" title="clean">A_rel = max_f 2|W_2(f)| / Var_pss(f)                  -&gt;  1 + O(eps^2)
+    A_abs = max 2|W_2(f)| at RMS 1 in the UNIFORM measure  -&gt;  3p = O(eps^2)</span> 
+<span class="s" style="background:transparent" title="clean">`A_rel` came out 1.000232, 1.000111, 1.000053, 1.000025, 1.000012, 1.000005 at
+`L = 100..3200`, approached from **above** (mode weights are not all positive in
+a non-reversible generator).</span> 
+<span class="s warn" style="background:rgba(230,195,70,0.38)" title="[0.82] antithesis: not-X-but-Y — the &#x27;not X, it&#x27;s Y&#x27; seesaw — ChatGPT&#x27;s favorite move; em-dash — em-dash density — the classic (still counts in volume)">So for the best observable the coherent mode is not
+a faint component of the correlation function — it is essentially all of it.</span> 
+<span class="s" style="background:transparent" title="clean">The
+amplitude is maximal.</span> 
+<span class="s" style="background:rgba(121,200,90,0.17)" title="[0.15] em-dash — em-dash density — the classic (still counts in volume)">What vanishes is how often one is allowed to look:
+`A_abs/p -&gt; 3.0000` as `K -&gt; infinity` with `(A_abs/p - 3) ~ K^-2.02`, and the 3
+is the state-to-site ratio of the normalisation, not dynamics — renormalise over
+`L` sites and it reads 1.000002.</span> 
+<span class="s" style="background:transparent" title="clean">The two differ by exactly the factor that is the whole effect, and I could not
+find a principled reason in this literature to prefer one.</span> 
+<span class="s" style="background:transparent" title="clean">That question is open
+and I have written to the author about it.</span> 
+<span class="s" style="background:transparent" title="clean">**Whether any repaired bound is true.** `sigma_ss &gt;= A_abs lambda_I^2/lambda_R`
+survives this counterexample with a margin growing like `eps^-0.88`, and fails on
+7 of 150 random oscillating chains because `A_abs` there runs 1.06 to 2.06 and
+multiplying by it makes the claim *stronger* than the original.</span> 
+<span class="s" style="background:rgba(117,200,90,0.16)" title="[0.13] em-dash — em-dash density — the classic (still counts in volume)">Capping it,
+`sigma_ss &gt;= min(1, A_abs) lambda_I^2/lambda_R`, reduces to OSB identically on
+any uniform ring (Parseval forces `A_abs = 1`, checked to 2e-15 — and that is the
+family OSB tested against), and survives all 600 sweep points, 511 of which have
+`A_abs &lt; 1` and so could have broken it. **It is a candidate.</span> 
+<span class="s" style="background:transparent" title="clean">There is no proof
+here and I did not attempt one.**</span> 
+<span class="s" style="background:rgba(118,200,90,0.16)" title="[0.14] hedge: rather than — &#x27;rather than&#x27; hedged comparison (huge AI-vs-human skew)">**Four of my own instruments lied**, and each named its own repair rather than a
+looser tolerance: a factor of 2 in my Fourier-sector algebra, caught as a clean
+0.500 relative error at 18 of 18 random inputs; a sector restriction that is
+exact under the L2 norm and wrong under the sup norm by exactly `(4/pi)^2`,
+because a square wave of unit height has a larger fundamental than a cosine and
+`W_2` is a product of two such functionals; a Newton refinement that refused a
+1e-40 tolerance on a determinant of order 1e131; and a power-law fit reading
+`eps^1.15` for a quantity whose closed form gives `sigma_A / 4 kappa eps` =
+1.0004 at `L = 102400`.</span> 
+<div class="raw">---</div>
+<span class="s" style="background:transparent" title="clean">*Code: `reproduce/lambda2_not_a_bound/`.</span> 
+<span class="s" style="background:transparent" title="clean">Seeded, no network.</span> 
+<span class="s" style="background:transparent" title="clean">Run `anchors.py`
+first; if any of the eight fails, nothing else in the directory is entitled to
+an opinion.</span> 
+<span class="s" style="background:transparent" title="clean">If anything above is wrong I would rather hear it than not.*</span> </div>
+</body></html>

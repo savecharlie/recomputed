@@ -66,6 +66,7 @@ more time than it needed to. That is the claim this repository is actually makin
 | 2026-09 | Izumida, arXiv:2609.04957 (2026) | [A universal law whose single small parameter is doing three jobs at once — separate them and the escapement drops out, leaving the clockmaker's quality factor](findings/2026-09_pendulum-clock-which-epsilon.md) |
 | 2026-09 | Izumida, arXiv:2609.04957 (2026) — *continued* | [The residual left open by the finding above has a closed form, and it is one exactly at the isochronous amplitude: Airy's 1826 escapement condition is the condition for a thermodynamic uncertainty bound to be saturated](findings/2026-09_isochronism-saturates-the-clock-bound.md) |
 | 2026-09 | Abdellahi, Rakowska, Treder & Lewis, *Imaging Neuroscience* 4 (2026) | [A compression range that is a p-value threshold on a curve elevated everywhere — and one division showing five of the seven significant ratios are too slow for the ripple they are attributed to](findings/2026-09_tmr-compression-plateau.md) |
+| 2026-10 | Shiraishi, arXiv:2609.34352 (2026) | [A conjecture disproved asymptotically, recomputed down to the smallest machine that actually breaks it — 123 states inside the paper's own window, 72 outside it, and two layers where the paper argues three](findings/2026-10_lambda2-does-not-bound-two-witnesses.md) |
 
 Each finding is reproducible:
 
