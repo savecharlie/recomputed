@@ -1,0 +1,13 @@
+field,verified_n,n,pct,ci_low_pct,ci_high_pct
+docking_software,50,50,100,93,100
+pdb_receptor,47,50,94,84,98
+receptor_preparation,43,50,86,74,93
+top_affinity_kcal,40,50,80,67,89
+ligand_preparation,36,50,72,58,83
+software_version,32,50,64,50,76
+validation_redocking,24,50,48,35,61
+grid_size,21,50,42,29,56
+grid_center,17,50,34,22,48
+exhaustiveness,10,50,20,11,33
+protein_chain,9,50,18,10,31
+random_seed,1,50,2,0,10

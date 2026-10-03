@@ -1,0 +1,38 @@
+================================================================================
+TARGET-DIVERSITY GENERALIZATION  —  does receptor dominance hold beyond 3 easy enzymes?
+================================================================================
+Attempted diverse docking runs: 305; successful: 238; valid cross-self comparisons: 191
+
+[A] Original 3 RIGID classical enzymes (the paper's current basis)
+    target    median|cross-self|  pairwise    n     within-tol
+    CAII      0.95                1.04        25    80%
+    THR       1.12                1.15        30    90%
+    TRYP      1.10                0.94        30    87%
+    POOLED    1.02                            85    86%
+
+[B] 9 DIVERSE flexible/induced-fit targets (kinases, proteases, ATPase, NR, PDE)
+    target    median|cross-self|  pairwise    n     within-tol
+    ABL1      2.23                1.73        9     44%
+    MAPK14    1.99                0.89        20    50%
+    HSP90     1.26                1.16        25    68%
+    ESR1      0.91                0.88        30    100%
+    CDK2      0.89                0.72        30    80%
+    MAPK1     0.81                0.77        15    100%
+    BACE1     0.67                0.59        30    97%
+    FXa       0.61                0.42        19    79%
+    PDE5A     0.38                0.37        13    100%
+    POOLED    0.84                            191   82%
+
+[C] SEARCH-NULL on diverse targets (box 25^3, exhaustiveness 16->4)
+    box size median |shift| = 0.033 (n=42) ; exhaustiveness = 0.001 (n=42)
+
+================================================================================
+VERDICT
+  diverse receptor |cross-self| median = 0.84  (vs original 3-enzyme 1.02)
+  diverse search max(box,exh) = 0.03
+  - receptor structure still a major determinant on flexible targets (>=0.5)?  YES
+  - still dominates search params by >5x?  YES
+  => the receptor-structure hierarchy is RETAINED across the sampled 12 targets / 7 families.
+     Scope remains limited to these targets and the shared box-based Vina search engine.
+  (diverse vs original cross-dock shift distributions: Mann-Whitney p=0.48 — comparable)
+================================================================================

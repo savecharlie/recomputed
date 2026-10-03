@@ -1,0 +1,348 @@
+{
+  "reporting": {
+    "n_papers": 50,
+    "counts": {
+      "docking_software": 50,
+      "exhaustiveness": 10,
+      "grid_center": 17,
+      "grid_size": 21,
+      "ligand_preparation": 36,
+      "pdb_receptor": 47,
+      "protein_chain": 9,
+      "random_seed": 1,
+      "receptor_preparation": 43,
+      "software_version": 32,
+      "top_affinity_kcal": 40,
+      "validation_redocking": 24
+    }
+  },
+  "readiness": {
+    "alpha": 0.7323477136855714,
+    "weights": {
+      "grid_center": 0.234,
+      "grid_size": 0.219,
+      "exhaustiveness": 0.209,
+      "validation_redocking": 0.169,
+      "protein_chain": 0.168
+    },
+    "full_12_alpha": 0.6198441558441558
+  },
+  "local": {
+    "manifest_rows": 65,
+    "obtained_scores": 40,
+    "qc_n": 37,
+    "paper_n": 7,
+    "within2_n": 29,
+    "median_abs_error": 0.538,
+    "strata": {
+      "E3": {
+        "n": 6,
+        "within2": 6
+      },
+      "E2": {
+        "n": 31,
+        "within2": 23
+      }
+    }
+  },
+  "cloud": {
+    "manifest_rows": 62,
+    "obtained_scores": 44,
+    "qc_n": 37,
+    "paper_n": 7,
+    "within2_n": 27,
+    "median_abs_error": 0.59,
+    "strata": {
+      "E3": {
+        "n": 5,
+        "within2": 4
+      },
+      "E2": {
+        "n": 32,
+        "within2": 23
+      }
+    }
+  },
+  "cross_environment": {
+    "n": 35,
+    "median_abs_delta": 0.17799999999999994,
+    "max_abs_delta": 0.802999999999999,
+    "verdict_flips": 1
+  },
+  "self_consistency": {
+    "n": 15,
+    "median_range": 0.04,
+    "max_range": 0.38
+  },
+  "ligand_resolution": {
+    "n_unique_reported_ligands": 116,
+    "resolvable": 90,
+    "resolvable_percent": 77.58620689655173,
+    "resolvable_wilson_95_percent": [
+      69.1834836197141,
+      84.22034276444631
+    ],
+    "unresolved": 26,
+    "unresolved_percent": 22.413793103448278,
+    "explicit_identifier": 41,
+    "pubchem_unique": 49,
+    "classification_counts": {
+      "descriptive_or_series_label": 12,
+      "explicit_identifier": 41,
+      "pubchem_ambiguous": 1,
+      "pubchem_not_found": 13,
+      "pubchem_unique": 49
+    },
+    "definition": "explicit identifier or one unique PubChem CID after deterministic name normalization"
+  },
+  "search_scaleup": {
+    "box_size": {
+      "n": 44,
+      "median": 0.0545,
+      "max": 1.971
+    },
+    "exhaustiveness": {
+      "n": 44,
+      "median": 0.010499999999999999,
+      "max": 0.545
+    }
+  },
+  "retained_decomposition": {
+    "box_size": {
+      "n": 12,
+      "median": 0.0285,
+      "max": 0.662
+    },
+    "box_center": {
+      "n": 105,
+      "median": 0.084,
+      "max": 3.343
+    },
+    "exhaustiveness": {
+      "n": 12,
+      "median": 0.014499999999999999,
+      "max": 0.477
+    },
+    "protonation": {
+      "n": 37,
+      "median": 0.188,
+      "max": 0.877
+    },
+    "identity": {
+      "n": 28,
+      "median": 0.5795,
+      "max": 2.04
+    }
+  },
+  "identity_pairs": {
+    "n": 124,
+    "median": 0.2865000000000002,
+    "spreads_n": 28,
+    "median_spread": 0.5795
+  },
+  "vinardo_crossdock": {
+    "n": 85,
+    "median": 0.9550000000000001
+  },
+  "annotation": {
+    "provenance": {
+      "human_verifier": "Dev",
+      "procedure": "manual row-level verification with Gemini/GPT cross-checking; Dev retained final decision authority",
+      "role": "one human pass for agent-versus-human validation; not two-human IRR"
+    },
+    "n_papers": 15,
+    "n_rows": 195,
+    "reporting_fields": {
+      "n": 180,
+      "exact_value_agreement": 0.7944444444444444,
+      "reporting_status_agreement": 0.9388888888888889,
+      "reporting_status_kappa": 0.8736277763594588,
+      "reporting_status_ac1": 0.8817522171459284,
+      "gate_kappa_ge_0_6": true
+    },
+    "e_class": {
+      "n": 15,
+      "exact_agreement": 0.4,
+      "linear_weighted_kappa": 0.47470817120622566,
+      "gate_kappa_ge_0_6": false
+    },
+    "per_field": [
+      {
+        "field": "docking_software",
+        "n": 15,
+        "exact_value_agreement": 0.8666666666666667,
+        "reporting_status_agreement": 0.9333333333333333,
+        "reporting_status_kappa": 0.0,
+        "reporting_status_ac1": 0.9287410926365796,
+        "agent_reported": 15,
+        "human_reported": 14
+      },
+      {
+        "field": "exhaustiveness",
+        "n": 15,
+        "exact_value_agreement": 0.9333333333333333,
+        "reporting_status_agreement": 0.9333333333333333,
+        "reporting_status_kappa": 0.8148148148148149,
+        "reporting_status_ac1": 0.8961937716262977,
+        "agent_reported": 3,
+        "human_reported": 4
+      },
+      {
+        "field": "grid_center",
+        "n": 15,
+        "exact_value_agreement": 0.9333333333333333,
+        "reporting_status_agreement": 0.9333333333333333,
+        "reporting_status_kappa": 0.8672566371681416,
+        "reporting_status_ac1": 0.8666666666666667,
+        "agent_reported": 7,
+        "human_reported": 8
+      },
+      {
+        "field": "grid_size",
+        "n": 15,
+        "exact_value_agreement": 0.8666666666666667,
+        "reporting_status_agreement": 1.0,
+        "reporting_status_kappa": 1.0,
+        "reporting_status_ac1": 1.0,
+        "agent_reported": 8,
+        "human_reported": 8
+      },
+      {
+        "field": "ligand_preparation",
+        "n": 15,
+        "exact_value_agreement": 0.6666666666666666,
+        "reporting_status_agreement": 1.0,
+        "reporting_status_kappa": 1.0,
+        "reporting_status_ac1": 1.0,
+        "agent_reported": 12,
+        "human_reported": 12
+      },
+      {
+        "field": "pdb_receptor",
+        "n": 15,
+        "exact_value_agreement": 0.5333333333333333,
+        "reporting_status_agreement": 0.9333333333333333,
+        "reporting_status_kappa": 0.0,
+        "reporting_status_ac1": 0.9287410926365796,
+        "agent_reported": 15,
+        "human_reported": 14
+      },
+      {
+        "field": "protein_chain",
+        "n": 15,
+        "exact_value_agreement": 0.8666666666666667,
+        "reporting_status_agreement": 0.9333333333333333,
+        "reporting_status_kappa": 0.8148148148148149,
+        "reporting_status_ac1": 0.8961937716262977,
+        "agent_reported": 4,
+        "human_reported": 3
+      },
+      {
+        "field": "random_seed",
+        "n": 15,
+        "exact_value_agreement": 1.0,
+        "reporting_status_agreement": 1.0,
+        "reporting_status_kappa": 1.0,
+        "reporting_status_ac1": 1.0,
+        "agent_reported": 0,
+        "human_reported": 0
+      },
+      {
+        "field": "receptor_preparation",
+        "n": 15,
+        "exact_value_agreement": 0.4666666666666667,
+        "reporting_status_agreement": 0.9333333333333333,
+        "reporting_status_kappa": 0.0,
+        "reporting_status_ac1": 0.9287410926365796,
+        "agent_reported": 14,
+        "human_reported": 15
+      },
+      {
+        "field": "software_version",
+        "n": 15,
+        "exact_value_agreement": 0.8666666666666667,
+        "reporting_status_agreement": 0.8666666666666667,
+        "reporting_status_kappa": 0.7272727272727274,
+        "reporting_status_ac1": 0.7435897435897436,
+        "agent_reported": 10,
+        "human_reported": 8
+      },
+      {
+        "field": "top_affinity_kcal",
+        "n": 15,
+        "exact_value_agreement": 0.8,
+        "reporting_status_agreement": 1.0,
+        "reporting_status_kappa": 1.0,
+        "reporting_status_ac1": 1.0,
+        "agent_reported": 12,
+        "human_reported": 12
+      },
+      {
+        "field": "validation_redocking",
+        "n": 15,
+        "exact_value_agreement": 0.7333333333333333,
+        "reporting_status_agreement": 0.8,
+        "reporting_status_kappa": 0.6153846153846155,
+        "reporting_status_ac1": 0.6000000000000001,
+        "agent_reported": 9,
+        "human_reported": 6
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "50 papers and 12 fields",
+      "pass": true
+    },
+    {
+      "name": "Table 1 counts replay from field matrix",
+      "pass": true
+    },
+    {
+      "name": "Exploratory core alpha and weights",
+      "pass": true
+    },
+    {
+      "name": "Locked local reproduction 29/37 across 7 papers",
+      "pass": true
+    },
+    {
+      "name": "Cloud reproduction 27/37",
+      "pass": true
+    },
+    {
+      "name": "Cross-environment overlap, median and one flip",
+      "pass": true
+    },
+    {
+      "name": "Self-consistency median 0.04 across 15 ligands",
+      "pass": true
+    },
+    {
+      "name": "Resolver 90 resolved and 26 unresolved among 116",
+      "pass": true
+    },
+    {
+      "name": "44-complex search medians",
+      "pass": true
+    },
+    {
+      "name": "Box-centre and protonation medians",
+      "pass": true
+    },
+    {
+      "name": "Identity pairwise and spread values",
+      "pass": true
+    },
+    {
+      "name": "Vinardo receptor contrast",
+      "pass": true
+    },
+    {
+      "name": "Retained human-model agreement summary",
+      "pass": true
+    }
+  ],
+  "scope": "Retained results replay; omitted original intermediates remain log-supported only.",
+  "status": "PASS_RETAINED_RESULT_CHECKS"
+}

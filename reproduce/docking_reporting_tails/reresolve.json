@@ -1,0 +1,1390 @@
+{
+ "n": 116,
+ "usable": 116,
+ "resolved_today": 89,
+ "resolved_paper_same_subset": 90,
+ "flips": 1,
+ "query_failures": 0,
+ "rows": [
+  {
+   "ligand_name": "(-)-Catechingallate",
+   "lookup": "(-)-Catechingallate",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "11a",
+   "lookup": "11a",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "13b",
+   "lookup": "13b",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "6-(3,3-Dimethylallyl)galangin",
+   "lookup": "6-(3,3-Dimethylallyl)galangin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5281945
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Aegelinoside B",
+   "lookup": "Aegelinoside B",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    44579744
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Ambamustine",
+   "lookup": "Ambamustine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    178137
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Amentoflavone",
+   "lookup": "Amentoflavone",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Amlodipine (Amplodipine)",
+   "lookup": "Amlodipine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    2162
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Ascorbic acid",
+   "lookup": "Ascorbic acid",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Atevirdine",
+   "lookup": "Atevirdine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    60848
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "BMS-986158",
+   "lookup": "BMS-986158",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Baricitinib",
+   "lookup": "Baricitinib",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Berbamine",
+   "lookup": "Berbamine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Betulinic acid",
+   "lookup": "Betulinic acid",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    64971
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Boceprevir",
+   "lookup": "Boceprevir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    10324367
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Bromocriptine",
+   "lookup": "Bromocriptine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    31101
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Broussoflavan A",
+   "lookup": "Broussoflavan A",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "CUDC-907",
+   "lookup": "CUDC-907",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Calophyllolide",
+   "lookup": "Calophyllolide",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5281392
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Cefuroxime axetil",
+   "lookup": "Cefuroxime axetil",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    6321416
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Cefuroxime pivoxetil",
+   "lookup": "Cefuroxime pivoxetil",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    6321417
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Cepharanthine",
+   "lookup": "Cepharanthine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Cilostamide (Cilostamidum)",
+   "lookup": "Cilostamide",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    2753
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Co-crystallized ligand (PRD-002214)",
+   "lookup": "Co-crystallized ligand (PRD-002214)",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Cobicistat",
+   "lookup": "Cobicistat",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Compound 1 (acidic degradation product of simeprevir)",
+   "lookup": "Compound 1 (acidic degradation product of simeprevir)",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Compound 2 (acidic degradation product of simeprevir)",
+   "lookup": "Compound 2 (acidic degradation product of simeprevir)",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Compound 3 (acidic degradation product of simeprevir)",
+   "lookup": "Compound 3 (acidic degradation product of simeprevir)",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Compound 4 (oxidative degradation product of simeprevir)",
+   "lookup": "Compound 4 (oxidative degradation product of simeprevir)",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Compound 5 (oxidative degradation product of simeprevir)",
+   "lookup": "Compound 5 (oxidative degradation product of simeprevir)",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Condelphine",
+   "lookup": "Condelphine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Curcumin",
+   "lookup": "Curcumin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    969516
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "DB02388",
+   "lookup": "DB02388",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "DB07618",
+   "lookup": "DB07618",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Danoprevir",
+   "lookup": "Danoprevir",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Darunavir",
+   "lookup": "Darunavir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    213039
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Denudatine",
+   "lookup": "Denudatine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Dexamethasone",
+   "lookup": "Dexamethasone",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Dihydroergotamine",
+   "lookup": "Dihydroergotamine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    10531
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Dracocephin-A (L\u2083)",
+   "lookup": "Dracocephin-A (L\u2083)",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Emetine",
+   "lookup": "Emetine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    10219
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Epirubicin",
+   "lookup": "Epirubicin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    41867
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Epoxyaurapten",
+   "lookup": "Epoxyaurapten",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    9796891
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Ergotamine",
+   "lookup": "Ergotamine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    8223
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Ervoside",
+   "lookup": "Ervoside",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Feruloyltyramine",
+   "lookup": "Feruloyltyramine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5280537
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Forsythoside A",
+   "lookup": "Forsythoside A",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5281773
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Ginkgolide M",
+   "lookup": "Ginkgolide M",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    71450923
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Glycobismine A",
+   "lookup": "Glycobismine A",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5462453
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Gnidicin",
+   "lookup": "Gnidicin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    70691946
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Gnididin",
+   "lookup": "Gnididin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    118701513
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Hydroxychloroquine",
+   "lookup": "Hydroxychloroquine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Ibutamoren",
+   "lookup": "Ibutamoren",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    178024
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Imidazolyl-methanone C10",
+   "lookup": "Imidazolyl-methanone C10",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Imidazolyl-methanone C11",
+   "lookup": "Imidazolyl-methanone C11",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Imidazolyl-methanone C12",
+   "lookup": "Imidazolyl-methanone C12",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Imidazolyl-methanone C13",
+   "lookup": "Imidazolyl-methanone C13",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Inhibitor N3 (native co-crystallized ligand)",
+   "lookup": "Inhibitor N3 (native co-crystallized ligand)",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Ivermectin",
+   "lookup": "Ivermectin",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Juglanin",
+   "lookup": "Juglanin",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Kazinol A",
+   "lookup": "Kazinol A",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Kazinol B",
+   "lookup": "Kazinol B",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Lopinavir",
+   "lookup": "Lopinavir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    92727
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "MK-6186",
+   "lookup": "MK-6186",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "ML188",
+   "lookup": "ML188",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    46897844
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Methylprednisolone",
+   "lookup": "Methylprednisolone",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Mezerein",
+   "lookup": "Mezerein",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    24832075
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Montirelin",
+   "lookup": "Montirelin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    6917793
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "N-1H-indazol-5-yl-2-(6-methylpyridin-2-yl)quinazolin-4-amine",
+   "lookup": "N-1H-indazol-5-yl-2-(6-methylpyridin-2-yl)quinazolin-4-amine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "N-benzoyl-L-phenylalaninol",
+   "lookup": "N-benzoyl-L-phenylalaninol",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    852848
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "N3",
+   "lookup": "N3",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "N3 (control inhibitor)",
+   "lookup": "N3 (control inhibitor)",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "N3 (native/reference inhibitor)",
+   "lookup": "N3 (native/reference inhibitor)",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "N3 (reference inhibitor)",
+   "lookup": "N3 (reference inhibitor)",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "N3 inhibitor",
+   "lookup": "N3 inhibitor",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Nafamostat (reference ligand)",
+   "lookup": "Nafamostat",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    4413
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Nelfinavir",
+   "lookup": "Nelfinavir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    64143
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Nirmatrelvir",
+   "lookup": "Nirmatrelvir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    155903259
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Panicutine",
+   "lookup": "Panicutine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Pavinetant",
+   "lookup": "Pavinetant",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Phyllospadine (L\u2086)",
+   "lookup": "Phyllospadine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    442868
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Prolinalin-A / Prolin-A (L\u2087)",
+   "lookup": "Prolinalin-A / Prolin-A (L\u2087)",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Pyridyl imidazole C5",
+   "lookup": "Pyridyl imidazole C5",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Pyronaridine",
+   "lookup": "Pyronaridine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Quinoline imidazole C14",
+   "lookup": "Quinoline imidazole C14",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Remdesivir",
+   "lookup": "Remdesivir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    121304016
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Ritonavir",
+   "lookup": "Ritonavir",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Rutin",
+   "lookup": "Rutin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5280805
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Saridegib",
+   "lookup": "Saridegib",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Savinin",
+   "lookup": "Savinin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5281867
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Sciadopitysin",
+   "lookup": "Sciadopitysin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5281696
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Simeprevir",
+   "lookup": "Simeprevir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    24873435
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Simeprevir (parent drug)",
+   "lookup": "Simeprevir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    24873435
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Tadalafil",
+   "lookup": "Tadalafil",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    110635
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Tafenoquine",
+   "lookup": "Tafenoquine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    115358
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Teicoplanin",
+   "lookup": "Teicoplanin",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Teicoplanin A3-1",
+   "lookup": "Teicoplanin A3-1",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Teicoplanin Aglycone",
+   "lookup": "Teicoplanin Aglycone",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Thiophenyl-imidazole C1",
+   "lookup": "Thiophenyl-imidazole C1",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Tubocurarine",
+   "lookup": "Tubocurarine",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    6000
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "Vancomycin",
+   "lookup": "Vancomycin",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Vilmorrianone",
+   "lookup": "Vilmorrianone",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "Vitexin",
+   "lookup": "Vitexin",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    5280441
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "antrafenine",
+   "lookup": "antrafenine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "baloxavir acid (BXA)",
+   "lookup": "baloxavir acid",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    124081876,
+    138567123,
+    134817204,
+    164769818
+   ],
+   "n_live_cids": 4,
+   "live_class": "pubchem_ambiguous",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "beta-D-galactopyranosyl",
+   "lookup": "beta-D-galactopyranosyl",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "compound 1",
+   "lookup": "compound 1",
+   "author_class": "descriptive_or_series_label",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "descriptive_or_series_label",
+   "live_resolvable": false,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "dihydroergotamine",
+   "lookup": "dihydroergotamine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "ergotamine",
+   "lookup": "ergotamine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "kappa-carrageenan conformer (ZINC96061851)",
+   "lookup": "kappa-carrageenan conformer (ZINC96061851)",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "licofelone acyl glucuronide",
+   "lookup": "licofelone acyl glucuronide",
+   "author_class": "pubchem_not_found",
+   "author_resolvable": false,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "pubchem_not_found",
+   "live_resolvable": false,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "phthalocyanine",
+   "lookup": "phthalocyanine",
+   "author_class": "explicit_identifier",
+   "author_resolvable": true,
+   "live_cids": [],
+   "n_live_cids": 0,
+   "live_class": "explicit_identifier",
+   "live_resolvable": true,
+   "note": "not queried"
+  },
+  {
+   "ligand_name": "raltegravir",
+   "lookup": "raltegravir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    54671008
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "ritonavir",
+   "lookup": "ritonavir",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    392622
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "ritonavir impurity H [EP] (des(isopropylthiazolyl) hydantoin-oxazolidinone ritonavir)",
+   "lookup": "ritonavir impurity H [EP]",
+   "author_class": "pubchem_unique",
+   "author_resolvable": true,
+   "live_cids": [
+    66832842
+   ],
+   "n_live_cids": 1,
+   "live_class": "pubchem_unique",
+   "live_resolvable": true,
+   "note": "ok"
+  },
+  {
+   "ligand_name": "spicoside A",
+   "lookup": "spicoside A",
+   "author_class": "pubchem_ambiguous",
+   "author_resolvable": false,
+   "live_cids": [
+    21576580,
+    44258517
+   ],
+   "n_live_cids": 2,
+   "live_class": "pubchem_ambiguous",
+   "live_resolvable": false,
+   "note": "ok"
+  }
+ ]
+}

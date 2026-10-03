@@ -1,0 +1,145 @@
+{
+  "provenance": {
+    "human_verifier": "Dev",
+    "procedure": "manual row-level verification with Gemini/GPT cross-checking; Dev retained final decision authority",
+    "role": "one human pass for agent-versus-human validation; not two-human IRR"
+  },
+  "n_papers": 15,
+  "n_rows": 195,
+  "reporting_fields": {
+    "n": 180,
+    "exact_value_agreement": 0.7944444444444444,
+    "reporting_status_agreement": 0.9388888888888889,
+    "reporting_status_kappa": 0.8736277763594588,
+    "reporting_status_ac1": 0.8817522171459284,
+    "gate_kappa_ge_0_6": true
+  },
+  "e_class": {
+    "n": 15,
+    "exact_agreement": 0.4,
+    "linear_weighted_kappa": 0.47470817120622566,
+    "gate_kappa_ge_0_6": false
+  },
+  "per_field": [
+    {
+      "field": "docking_software",
+      "n": 15,
+      "exact_value_agreement": 0.8666666666666667,
+      "reporting_status_agreement": 0.9333333333333333,
+      "reporting_status_kappa": 0.0,
+      "reporting_status_ac1": 0.9287410926365796,
+      "agent_reported": 15,
+      "human_reported": 14
+    },
+    {
+      "field": "exhaustiveness",
+      "n": 15,
+      "exact_value_agreement": 0.9333333333333333,
+      "reporting_status_agreement": 0.9333333333333333,
+      "reporting_status_kappa": 0.8148148148148149,
+      "reporting_status_ac1": 0.8961937716262977,
+      "agent_reported": 3,
+      "human_reported": 4
+    },
+    {
+      "field": "grid_center",
+      "n": 15,
+      "exact_value_agreement": 0.9333333333333333,
+      "reporting_status_agreement": 0.9333333333333333,
+      "reporting_status_kappa": 0.8672566371681416,
+      "reporting_status_ac1": 0.8666666666666667,
+      "agent_reported": 7,
+      "human_reported": 8
+    },
+    {
+      "field": "grid_size",
+      "n": 15,
+      "exact_value_agreement": 0.8666666666666667,
+      "reporting_status_agreement": 1.0,
+      "reporting_status_kappa": 1.0,
+      "reporting_status_ac1": 1.0,
+      "agent_reported": 8,
+      "human_reported": 8
+    },
+    {
+      "field": "ligand_preparation",
+      "n": 15,
+      "exact_value_agreement": 0.6666666666666666,
+      "reporting_status_agreement": 1.0,
+      "reporting_status_kappa": 1.0,
+      "reporting_status_ac1": 1.0,
+      "agent_reported": 12,
+      "human_reported": 12
+    },
+    {
+      "field": "pdb_receptor",
+      "n": 15,
+      "exact_value_agreement": 0.5333333333333333,
+      "reporting_status_agreement": 0.9333333333333333,
+      "reporting_status_kappa": 0.0,
+      "reporting_status_ac1": 0.9287410926365796,
+      "agent_reported": 15,
+      "human_reported": 14
+    },
+    {
+      "field": "protein_chain",
+      "n": 15,
+      "exact_value_agreement": 0.8666666666666667,
+      "reporting_status_agreement": 0.9333333333333333,
+      "reporting_status_kappa": 0.8148148148148149,
+      "reporting_status_ac1": 0.8961937716262977,
+      "agent_reported": 4,
+      "human_reported": 3
+    },
+    {
+      "field": "random_seed",
+      "n": 15,
+      "exact_value_agreement": 1.0,
+      "reporting_status_agreement": 1.0,
+      "reporting_status_kappa": 1.0,
+      "reporting_status_ac1": 1.0,
+      "agent_reported": 0,
+      "human_reported": 0
+    },
+    {
+      "field": "receptor_preparation",
+      "n": 15,
+      "exact_value_agreement": 0.4666666666666667,
+      "reporting_status_agreement": 0.9333333333333333,
+      "reporting_status_kappa": 0.0,
+      "reporting_status_ac1": 0.9287410926365796,
+      "agent_reported": 14,
+      "human_reported": 15
+    },
+    {
+      "field": "software_version",
+      "n": 15,
+      "exact_value_agreement": 0.8666666666666667,
+      "reporting_status_agreement": 0.8666666666666667,
+      "reporting_status_kappa": 0.7272727272727274,
+      "reporting_status_ac1": 0.7435897435897436,
+      "agent_reported": 10,
+      "human_reported": 8
+    },
+    {
+      "field": "top_affinity_kcal",
+      "n": 15,
+      "exact_value_agreement": 0.8,
+      "reporting_status_agreement": 1.0,
+      "reporting_status_kappa": 1.0,
+      "reporting_status_ac1": 1.0,
+      "agent_reported": 12,
+      "human_reported": 12
+    },
+    {
+      "field": "validation_redocking",
+      "n": 15,
+      "exact_value_agreement": 0.7333333333333333,
+      "reporting_status_agreement": 0.8,
+      "reporting_status_kappa": 0.6153846153846155,
+      "reporting_status_ac1": 0.6000000000000001,
+      "agent_reported": 9,
+      "human_reported": 6
+    }
+  ]
+}

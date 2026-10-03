@@ -1,0 +1,46 @@
+CASF decomposition - NUMBERS OF RECORD (honest v2)  floor=0.04 tol=2.0 eq-margin=0.43
+
+Per-parameter effect (median |shift|, like-for-like single-perturbation), within-tolerance rate:
+  exhaustiveness             n= 44  median=0.010  within-2 44/44 (100%)
+  box size                   n= 44  median=0.054  within-2 44/44 (100%)
+  box center                 n=105  median=0.084  within-2 103/105 (98%)
+  protonation                n= 37  median=0.188  within-2 37/37 (100%)
+  ligand identity (pairwise) n=124  median=0.287  within-2 123/124 (99%)
+  [identity worst-case spread] n= 28  median=0.580  (max-over-k order statistic; ambiguity upper bound, NOT compared head-to-head)
+
+Equivalence of search params (one-sided test: median|d| < margin), margin-sensitivity sweep:
+  box size     n= 44 med=0.054 | 0.10:ns(2e-01)  0.20:EQ(5e-03)  0.30:EQ(6e-04)  0.43:EQ(5e-06)  0.50:EQ(2e-06)
+  box center   n=105 med=0.084 | 0.10:ns(9e-01)  0.20:ns(1e-01)  0.30:EQ(3e-04)  0.43:EQ(9e-06)  0.50:EQ(3e-06)
+  exhaustiveness n= 44 med=0.010 | 0.10:EQ(1e-06)  0.20:EQ(7e-08)  0.30:EQ(8e-09)  0.43:EQ(4e-09)  0.50:EQ(4e-09)
+  -> at the principled margin = cross-env floor 0.43, all three are equivalent-to-negligible; the
+     verdict flips for box_size/box_center below ~0.3, so the equivalence is reported WITH this sweep,
+     and the reproducibility claim is anchored to the within-2 rates above, not to the equivalence label.
+
+Vs the 0.04 self-consistency noise floor (Wilcoxon > floor):
+  box size                   p=4.80e-03  -> ABOVE floor
+  exhaustiveness             p=9.77e-01  -> indistinguishable from floor
+  box center                 p=1.05e-07  -> ABOVE floor
+  protonation                p=9.32e-08  -> ABOVE floor
+  ligand identity (pairwise) p=1.84e-21  -> ABOVE floor
+
+Between-parameter (Mann-Whitney, one-sided) with Benjamini-Hochberg FDR:
+  identity   > protonation      1.5x  p=8.64e-03  q(BH)=9.94e-03  sig
+  identity   > box_size         5.3x  p=6.73e-08  q(BH)=1.57e-07  sig
+  identity   > box_center       3.4x  p=4.80e-07  q(BH)=8.41e-07  sig
+  identity   > exhaustiveness  27.3x  p=2.73e-17  q(BH)=1.91e-16  sig
+  protonation > box_size         3.4x  p=3.88e-04  q(BH)=5.43e-04  sig
+  protonation > box_center       2.2x  p=9.94e-03  q(BH)=9.94e-03  sig
+  protonation > exhaustiveness  17.9x  p=1.39e-10  q(BH)=4.86e-10  sig
+  NOTE: identity(pairwise) ~ protonation (1.5x, not p<0.001); identity exceeds every SEARCH param (p<0.01).
+
+Cross-docking (receptor structure) - the harder case:
+  pooled |cross-self| n=85  median=1.02  max=4.49  within-2 73/85 (86%)
+  LIGAND-LEVEL (n=17, avoids pseudoreplication): median of per-ligand medians=1.30
+    Wilcoxon ligand-level > identity(pairwise 0.29): p=0.0000
+    Wilcoxon ligand-level > floor 0.04: p=0.0000
+  redocking-favorability check: self-dock is the single best score in 3/17 ligands (median rank 3/6, mean 2.88); a non-cognate structure beats it in 14/17.
+  signed (cross - self) median = +0.43 kcal/mol (32/85 cross-docks score BETTER than self) -> 1.02 is score DISPERSION from receptor choice, not a systematic induced-fit penalty.
+
+HONEST HIERARCHY (like-for-like medians): receptor structure 1.02 >> ligand identity 0.29 ~ protonation 0.19 >> box center 0.08 > box size 0.05 > exhaustiveness 0.01.
+Ligand identity's importance is NOT its shift magnitude (modest, ~protonation) but that an UNRESOLVABLE ligand name
+makes reproduction impossible in principle (a categorical failure) and it is the most under-reported meaningful field.

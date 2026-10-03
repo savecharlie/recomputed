@@ -1,0 +1,117 @@
+ligand_name,reported_identifier,classification,lookup_name,pubchem_cids,resolvable
+(-)-Catechingallate,ZINC000004534390,explicit_identifier,,,True
+11a,,descriptive_or_series_label,,,False
+13b,,descriptive_or_series_label,,,False
+"6-(3,3-Dimethylallyl)galangin",,pubchem_unique,"6-(3,3-Dimethylallyl)galangin",5281945,True
+Aegelinoside B,,pubchem_unique,Aegelinoside B,44579744,True
+Ambamustine,,pubchem_unique,Ambamustine,178137,True
+Amentoflavone,ZINC000003984030,explicit_identifier,,,True
+Amlodipine (Amplodipine),,pubchem_unique,Amlodipine,2162,True
+Ascorbic acid,PubChem CID 54670067,explicit_identifier,,,True
+Atevirdine,,pubchem_unique,Atevirdine,60848,True
+BMS-986158,DB15435,explicit_identifier,,,True
+Baricitinib,PubChem CID 44205240,explicit_identifier,,,True
+Berbamine,ZINC000030726840,explicit_identifier,,,True
+Betulinic acid,,pubchem_unique,Betulinic acid,64971,True
+Boceprevir,,pubchem_unique,Boceprevir,10324367,True
+Bromocriptine,,pubchem_unique,Bromocriptine,31101,True
+Broussoflavan A,ZINC000040867311,explicit_identifier,,,True
+CUDC-907,DB11891,explicit_identifier,,,True
+Calophyllolide,,pubchem_unique,Calophyllolide,5281392,True
+Cefuroxime axetil,,pubchem_unique,Cefuroxime axetil,6321416,True
+Cefuroxime pivoxetil,,pubchem_unique,Cefuroxime pivoxetil,6321417,True
+Cepharanthine,PubChem CID 10206,explicit_identifier,,,True
+Cilostamide (Cilostamidum),,pubchem_unique,Cilostamide,2753,True
+Co-crystallized ligand (PRD-002214),PRD-002214,explicit_identifier,,,True
+Cobicistat,DB09065,explicit_identifier,,,True
+Compound 1 (acidic degradation product of simeprevir),,descriptive_or_series_label,,,False
+Compound 2 (acidic degradation product of simeprevir),,descriptive_or_series_label,,,False
+Compound 3 (acidic degradation product of simeprevir),,descriptive_or_series_label,,,False
+Compound 4 (oxidative degradation product of simeprevir),,descriptive_or_series_label,,,False
+Compound 5 (oxidative degradation product of simeprevir),,descriptive_or_series_label,,,False
+Condelphine,CID_441720,explicit_identifier,,,True
+Curcumin,,pubchem_unique,Curcumin,969516,True
+DB02388,DB02388,explicit_identifier,,,True
+DB07618,DB07618,explicit_identifier,,,True
+Danoprevir,PubChem CID 9460579,explicit_identifier,,,True
+Darunavir,,pubchem_unique,Darunavir,213039,True
+Denudatine,CID_161515,explicit_identifier,,,True
+Dexamethasone,PubChem CID 5743,explicit_identifier,,,True
+Dihydroergotamine,,pubchem_unique,Dihydroergotamine,10531,True
+Dracocephin-A (L₃),,pubchem_not_found,,,False
+Emetine,,pubchem_unique,Emetine,10219,True
+Epirubicin,,pubchem_unique,Epirubicin,41867,True
+Epoxyaurapten,,pubchem_unique,Epoxyaurapten,9796891,True
+Ergotamine,,pubchem_unique,Ergotamine,8223,True
+Ervoside,,pubchem_not_found,,,False
+Feruloyltyramine,,pubchem_unique,Feruloyltyramine,5280537,True
+Forsythoside A,,pubchem_unique,Forsythoside A,5281773,True
+Ginkgolide M,,pubchem_unique,Ginkgolide M,71450923,True
+Glycobismine A,,pubchem_unique,Glycobismine A,5462453,True
+Gnidicin,,pubchem_unique,Gnidicin,70691946,True
+Gnididin,,pubchem_unique,Gnididin,118701513,True
+Hydroxychloroquine,PubChem CID 3652,explicit_identifier,,,True
+Ibutamoren,,pubchem_unique,Ibutamoren,178024,True
+Imidazolyl-methanone C10,,pubchem_not_found,,,False
+Imidazolyl-methanone C11,,pubchem_not_found,,,False
+Imidazolyl-methanone C12,,pubchem_not_found,,,False
+Imidazolyl-methanone C13,,pubchem_not_found,,,False
+Inhibitor N3 (native co-crystallized ligand),PubChem CID 169452405,explicit_identifier,,,True
+Ivermectin,PubChem CID 6321424,explicit_identifier,,,True
+Juglanin,ZINC000033832091,explicit_identifier,,,True
+Kazinol A,ZINC000004098326,explicit_identifier,,,True
+Kazinol B,ZINC000005854490,explicit_identifier,,,True
+Lopinavir,,pubchem_unique,Lopinavir,92727,True
+MK-6186,DB12999,explicit_identifier,,,True
+ML188,,pubchem_unique,ML188,46897844,True
+Methylprednisolone,PubChem CID 6741,explicit_identifier,,,True
+Mezerein,,pubchem_unique,Mezerein,24832075,True
+Montirelin,,pubchem_unique,Montirelin,6917793,True
+N-1H-indazol-5-yl-2-(6-methylpyridin-2-yl)quinazolin-4-amine,DB08450,explicit_identifier,,,True
+N-benzoyl-L-phenylalaninol,,pubchem_unique,N-benzoyl-L-phenylalaninol,852848,True
+N3,,descriptive_or_series_label,,,False
+N3 (control inhibitor),,descriptive_or_series_label,,,False
+N3 (native/reference inhibitor),,descriptive_or_series_label,,,False
+N3 (reference inhibitor),,descriptive_or_series_label,,,False
+N3 inhibitor,,pubchem_not_found,,,False
+Nafamostat (reference ligand),,pubchem_unique,Nafamostat,4413,True
+Nelfinavir,,pubchem_unique,Nelfinavir,64143,True
+Nirmatrelvir,,pubchem_unique,Nirmatrelvir,155903259,True
+Panicutine,CID_44566630,explicit_identifier,,,True
+Pavinetant,DB11692,explicit_identifier,,,True
+Phyllospadine (L₆),,pubchem_unique,Phyllospadine,442868,True
+Prolinalin-A / Prolin-A (L₇),,pubchem_not_found,,,False
+Pyridyl imidazole C5,,pubchem_not_found,,,False
+Pyronaridine,DB12975,explicit_identifier,,,True
+Quinoline imidazole C14,,pubchem_not_found,,,False
+Remdesivir,,pubchem_unique,Remdesivir,121304016,True
+Ritonavir,PubChem CID 392622,explicit_identifier,,,True
+Rutin,,pubchem_unique,Rutin,5280805,True
+Saridegib,PubChem CID 25027363,explicit_identifier,,,True
+Savinin,,pubchem_unique,Savinin,5281867,True
+Sciadopitysin,,pubchem_unique,Sciadopitysin,5281696,True
+Simeprevir,,pubchem_unique,Simeprevir,24873435,True
+Simeprevir (parent drug),,pubchem_unique,Simeprevir,24873435,True
+Tadalafil,,pubchem_unique,Tadalafil,110635,True
+Tafenoquine,,pubchem_unique,Tafenoquine,115358,True
+Teicoplanin,PubChem CID 133065662,explicit_identifier,,,True
+Teicoplanin A3-1,PubChem CID 16152170,explicit_identifier,,,True
+Teicoplanin Aglycone,PubChem CID 16154789,explicit_identifier,,,True
+Thiophenyl-imidazole C1,,pubchem_not_found,,,False
+Tubocurarine,,pubchem_unique,Tubocurarine,6000,True
+Vancomycin,PubChem CID 14969,explicit_identifier,,,True
+Vilmorrianone,CID_44566629,explicit_identifier,,,True
+Vitexin,,pubchem_unique,Vitexin,5280441,True
+antrafenine,DB01419,explicit_identifier,,,True
+baloxavir acid (BXA),,pubchem_unique,baloxavir acid,124081876,True
+beta-D-galactopyranosyl,,pubchem_not_found,,,False
+compound 1,,descriptive_or_series_label,,,False
+dihydroergotamine,DB00320,explicit_identifier,,,True
+ergotamine,DB00696,explicit_identifier,,,True
+kappa-carrageenan conformer (ZINC96061851),ZINC96061851,explicit_identifier,,,True
+licofelone acyl glucuronide,,pubchem_not_found,,,False
+phthalocyanine,DB12983,explicit_identifier,,,True
+raltegravir,,pubchem_unique,raltegravir,54671008,True
+ritonavir,,pubchem_unique,ritonavir,392622,True
+ritonavir impurity H [EP] (des(isopropylthiazolyl) hydantoin-oxazolidinone ritonavir),,pubchem_unique,ritonavir impurity H [EP],66832842,True
+spicoside A,,pubchem_ambiguous,spicoside A,21576580;44258517,False

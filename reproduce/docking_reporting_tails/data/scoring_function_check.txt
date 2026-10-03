@@ -1,0 +1,24 @@
+============================================================================
+ENGINE-2 GENERALIZATION TEST  —  Vina (default) vs Vinardo (re-parametrized scoring)
+============================================================================
+
+[1] RECEPTOR STRUCTURE (cross-docking, the lone giant determinant)
+    engine    median |cross-self|   median pairwise spread  n_pairs n_ligkeys
+    Vina      1.021                 1.035                   255     17
+    Vinardo   0.955                 0.955                   255     17
+    cross-engine agreement of per-structure shift: Spearman rho=0.64 (p=4.5e-11, n=85)
+    -> concordant shifts support a receptor-choice effect retained across these scoring terms;
+       both functions share the Vina search engine, so this is not an independent-engine test
+
+[2] SEARCH PARAMETERS (box size 25^3, exhaustiveness 16->4 — asserted-critical, found NULL under Vina)
+    engine    median |box shift|    n     median |exh shift|    n
+    Vina      0.054                 44    0.010                 44
+    Vinardo   0.082                 44    0.008                 44
+
+============================================================================
+VERDICT
+  Under Vinardo: receptor |cross-self| median = 0.96 ; search max(box,exh) = 0.08
+  - receptor still dominates search by >5x?   YES
+  - search params still ~null (<0.25)?        YES
+  => HIERARCHY IS RETAINED across Vina and Vinardo scoring terms within the shared Vina search engine.
+============================================================================

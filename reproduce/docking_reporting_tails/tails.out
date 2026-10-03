@@ -1,0 +1,98 @@
+TABLE A  the same factors, ranked by MEDIAN -- the paper's ordering
+  factor                                      n   median              95% CI
+  exhaustiveness                             44    0.010  [0.004, 0.025]
+  random seed                                15    0.040  [0.020, 0.160]
+  box size                                   44    0.054  [0.034, 0.090]
+  box centre                                105    0.084  [0.041, 0.135]
+  ligand protonation                         37    0.188  [0.114, 0.222]
+  ligand identity                           124    0.287  [0.227, 0.350]
+  ligand identity (within-complex spread)    28    0.580  [0.389, 0.697]
+  receptor structure (Vinardo)               85    0.955  [0.651, 1.271]
+
+TABLE B  the same factors, ranked by TAIL -- how often they cross a bar
+  factor                                      n     p90     p95     max   >0.38   >0.80    >2.0
+  random seed                                15   0.300   0.380   0.380   0.0%   0.0%   0.0%
+  exhaustiveness                             44   0.090   0.119   0.545   2.3%   0.0%   0.0%
+  box size                                   44   0.600   0.762   1.971  13.6%   4.5%   0.0%
+  box centre                                105   1.020   1.278   3.343  23.8%  13.3%   1.9%
+  ligand protonation                         37   0.456   0.712   0.877  24.3%   2.7%   0.0%
+  ligand identity                           124   0.708   0.900   2.040  38.7%   8.9%   0.8%
+  ligand identity (within-complex spread)    28   1.254   1.749   2.040  67.9%  21.4%   3.6%
+  receptor structure (Vinardo)               85   2.460   2.848   5.027  77.6%  56.5%  17.6%
+
+TABLE C  the ordering changes.  Rank by median vs rank by P(>0.80):
+  by median                                  by P(exceeds hardware noise)              
+   *exhaustiveness                            random seed                               
+   *random seed                               exhaustiveness                            
+   *box size                                  ligand protonation                        
+   *box centre                                box size                                  
+   *ligand protonation                        ligand identity                           
+   *ligand identity                           box centre                                
+    ligand identity (within-complex spread)   ligand identity (within-complex spread)   
+    receptor structure (Vinardo)              receptor structure (Vinardo)              
+
+KEY NUMBERS
+  box_centre        median = 0.084   P(>0.80) = 13.3%   P(>2.0) = 1.9%   max = 3.343
+  protonation       median = 0.188   P(>0.80) = 2.7%   P(>2.0) = 0.0%   max = 0.877
+  ratio of medians  protonation/box_centre = 2.24
+  ratio of maxima   box_centre/protonation = 3.81
+
+  Mann-Whitney box_centre vs protonation: U = 1441.0, p = 0.01988   (medians differ: protonation is LARGER)
+  box_centre values above the hardware-noise maximum: 14 of 105
+  box_centre values above the 2.0 tolerance:          2 of 105
+  protonation values above the 2.0 tolerance:         0 of 37
+
+REPORTING RATE vs TAIL RISK  (Table 1 span-verified counts over 50 papers)
+  factor                           field                   reported  P(>0.80)  P(>2.0)
+  random seed                      random_seed               1/50     0.0%    0.0%
+  exhaustiveness                   exhaustiveness           10/50     0.0%    0.0%
+  box size                         grid_size                21/50     4.5%    0.0%
+  box centre                       grid_center              17/50    13.3%    1.9%
+  ligand protonation               ligand_preparation       36/50     2.7%    0.0%
+  receptor structure (Vinardo)     pdb_receptor             47/50    56.5%   17.6%
+
+wrote tails.json
+
+========================================================================
+TABLE D  the tail probabilities WITH intervals, and the clustering
+A tail estimated from 37 rows is not a tail.  And these rows are not
+independent: each factor is perturbed within a small set of complexes,
+so the effective sample size is the number of COMPLEXES, not of rows.
+
+  factor                                    rows  clusters   P(>2.0)   95% CI (Clopper-Pearson)
+  random seed                                 15         2     0.0%   [0.0%, 21.8%]
+  exhaustiveness                              44        44     0.0%   [0.0%, 8.0%]
+  box size                                    44        44     0.0%   [0.0%, 8.0%]
+  box centre                                 105       105     1.9%   [0.2%, 6.7%]
+  ligand protonation                          37        37     0.0%   [0.0%, 9.5%]
+  ligand identity                            124        28     0.8%   [0.0%, 4.4%]
+  ligand identity (within-complex spread)     28        28     3.6%   [0.1%, 18.3%]
+  receptor structure (Vinardo)                85         3    17.6%   [10.2%, 27.4%]
+
+  So: 'protonation never exceeds 2.0' rests on 0 of 37, whose upper
+  95% bound is the number printed above -- it is not a demonstration
+  that protonation is safe, only that 37 rows did not show it.
+
+  box centre: each row is already a different complex, so the collapse is
+    complexes = 105, median of worst = 0.084
+    complexes whose worst box-centre shift exceeds 0.80 = 14 of 105
+    complexes whose worst box-centre shift exceeds 2.00 = 2 of 105
+  protonation, same collapse:
+    complexes = 37, median of worst = 0.188
+    complexes whose worst protonation shift exceeds 0.80 = 1 of 37
+
+  WHERE THE EFFECTIVE SAMPLE SIZE REALLY BITES
+    receptor structure: 85 contrasts over 3 protein families (['CAII', 'THR', 'TRYP']), 17 ligands, 18 PDB entries.
+    random seed:        15 ranges over 2 PDBs (['5R7Y', '6LU7']).
+    So of the two floors I used as reference levels, the hardware one
+    (35 shared claims, max 0.80) is the better grounded and the seed one
+    (2 proteins) should not carry weight.  The ordering below uses the
+    hardware floor for that reason.
+
+  THE CLAIM I AM WILLING TO MAKE, and nothing wider:
+  Ranked by median, box centre sits BELOW ligand protonation and the
+  paper deprioritises it.  Ranked by the chance of a shift larger than
+  the paper's own hardware-noise ceiling, box centre sits ABOVE it.
+  Both orderings are computed from the author's own redistributed data.
+  Which one a reporting checklist should follow is a question about what
+  a checklist is for, and the paper does not ask it.

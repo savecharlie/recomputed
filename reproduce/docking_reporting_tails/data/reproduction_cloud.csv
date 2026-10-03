@@ -1,0 +1,63 @@
+claim_id,paper_id,e_class,target_pdb,ligand_name,reported_score,rerun_score,abs_delta,within_1,within_2,status,smiles_source,box_source,box_size_assumed,vina_version
+C0001,P0006,E3,6LU7,N3 inhibitor,-7.8,,,False,False,smiles_unresolved,cache,default_25,default_25,AutoDock Vina f458505-mod
+C0002,P0006,E3,6LU7,phthalocyanine,-10.7,-8.554,2.146,False,False,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0003,P0006,E3,6LU7,dihydroergotamine,-9.9,-9.484,0.416,True,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0004,P0006,E3,6LU7,N-1H-indazol-5-yl-2-(6-methylpyridin-2-yl)quinazolin-4-amine,-9.8,-9.677,0.123,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0005,P0006,E3,6LU7,ergotamine,-9.7,-10.352,0.652,True,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0006,P0006,E3,6LU7,antrafenine,-9.4,-8.907,0.493,True,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0007,P0009,E2,6yb7,Savinin,-8.864,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0008,P0009,E2,6yb7,Betulinic acid,-8.644,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0009,P0009,E2,6yb7,Curcumin,-8.373,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0010,P0009,E2,6yb7,Curcumin,-8.554,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0011,P0009,E2,6yb7,Betulinic acid,-8.548,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0012,P0009,E2,6yb7,Savinin,-8.518,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0013,P0009,E2,6yb7,N3,-8.636,,,False,False,smiles_unresolved,cache,default_25,default_25,AutoDock Vina f458505-mod
+C0014,P0009,E2,6yb7,Remdesivir,-8.894,,,False,False,needs_prepped_receptor:6yb7,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0015,P0009,E2,6yb7,Darunavir,-8.399,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0016,P0009,E2,6yb7,ML188,-8.883,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0017,P0009,E2,6yb7,Nirmatrelvir,-7.793,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0018,P0009,E2,6yb7,Nirmatrelvir,-8.404,,,False,False,needs_prepped_receptor:6yb7,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0064,P0047,E2,5R7Y,Panicutine,-7.4,-0.17,7.23,False,False,docked,pubchem:name:IsomericSMILES,,,AutoDock Vina f458505-mod
+C0065,P0047,E2,5R7Y,Vilmorrianone,-7.0,-0.356,6.644,False,False,docked,pubchem:name:IsomericSMILES,,,AutoDock Vina f458505-mod
+C0066,P0047,E2,5R7Y,Denudatine,-6.0,-0.183,5.817,False,False,docked,pubchem:name:IsomericSMILES,,,AutoDock Vina f458505-mod
+C0067,P0047,E2,5R7Y,Condelphine,-5.9,-0.216,5.684,False,False,docked,pubchem:name:IsomericSMILES,,,AutoDock Vina f458505-mod
+C0078,P0014,E2,6LU7,Ginkgolide M,-11.2,-7.03,4.17,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0079,P0014,E2,6LU7,Mezerein,-11.0,-7.045,3.955,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0080,P0014,E2,6LU7,Tubocurarine,-10.9,-5.783,5.117,False,False,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0081,P0014,E2,6LU7,Gnidicin,-10.4,-7.695,2.705,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0082,P0014,E2,6LU7,Glycobismine A,-10.4,-9.026,1.374,False,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0083,P0014,E2,6LU7,Sciadopitysin,-10.2,-9.26,0.94,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0084,P0014,E2,6LU7,Gnididin,-9.2,-6.755,2.445,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0085,P0014,E2,6LU7,Emetine,-8.7,-7.588,1.112,False,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0086,P0014,E2,6LU7,Vitexin,-8.3,-8.07,0.23,True,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0087,P0014,E2,6LU7,Calophyllolide,-8.3,-8.03,0.27,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0088,P0014,E2,6LU7,"6-(3,3-Dimethylallyl)galangin",-7.9,-7.31,0.59,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0089,P0014,E2,6LU7,Nelfinavir,-9.1,-7.67,1.43,False,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0090,P0014,E2,6LU7,Lopinavir,-8.4,-8.584,0.184,True,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0115,P0039,E2,6LU7,Simeprevir,-10.3,-6.296,4.004,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0116,P0039,E2,6LU7,Ergotamine,-9.8,-9.543,0.257,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0117,P0039,E2,6LU7,Bromocriptine,-9.6,-9.934,0.334,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0118,P0039,E2,6LU7,Tadalafil,-9.5,-9.442,0.058,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0125,P0053,E3,6LU7,baloxavir acid (BXA),-7.4,,,False,False,smiles_unresolved,cache,default_25,default_25,AutoDock Vina f458505-mod
+C0167,P0005,E2,6Y2E,Dihydroergotamine,-9.2,-9.479,0.279,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0168,P0005,E2,6Y2E,Ergotamine,-9.2,-8.97,0.23,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0178,P0012,E2,6LU7,Aegelinoside B,-8.54,-1.859,6.681,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0180,P0012,E2,6LU7,Ervoside,-7.91,,,False,False,smiles_unresolved,cache,default_25,default_25,AutoDock Vina f458505-mod
+C0182,P0012,E2,6LU7,Epoxyaurapten,-7.75,-1.679,6.071,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0184,P0012,E2,6LU7,Feruloyltyramine,-8.01,-2.134,5.876,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0186,P0012,E2,6LU7,N-benzoyl-L-phenylalaninol,-8.22,-1.796,6.424,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0195,P0017,E2,6LU7,Danoprevir,-7.7,-5.884,1.816,False,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0196,P0017,E2,6LU7,Remdesivir,-8.1,-7.726,0.374,True,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0197,P0017,E2,6LU7,Saridegib,-7.8,-6.403,1.397,False,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0198,P0017,E2,6LU7,Cepharanthine,-7.9,-5.63,2.27,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0199,P0017,E2,6LU7,Ivermectin,-7.9,,,False,False,smiles_unresolved,cache,default_25,default_25,AutoDock Vina f458505-mod
+C0200,P0017,E2,6LU7,Baricitinib,-7.4,-7.578,0.178,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0201,P0017,E2,6LU7,Lopinavir,-7.4,-8.538,1.138,False,True,docked,offline_sdf,default_25,default_25,AutoDock Vina f458505-mod
+C0202,P0017,E2,6LU7,Ritonavir,-7.4,-7.76,0.36,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0203,P0017,E2,6LU7,Dexamethasone,-7.1,-6.904,0.196,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0204,P0017,E2,6LU7,Methylprednisolone,-7.1,-7.228,0.128,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0205,P0017,E2,6LU7,Hydroxychloroquine,-6.0,-5.951,0.049,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0206,P0017,E2,6LU7,Ascorbic acid,-5.4,-5.339,0.061,True,True,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0207,P0017,E2,6LU7,N3 (control inhibitor),-7.48,,,False,False,smiles_unresolved,cache,default_25,default_25,AutoDock Vina f458505-mod
+C0224,P0023,E2,6LU7,Teicoplanin Aglycone,-8.7,-3.571,5.129,False,False,docked,pubchem:name:IsomericSMILES,default_25,default_25,AutoDock Vina f458505-mod
+C0225,P0023,E2,6LU7,Inhibitor N3 (native co-crystallized ligand),-7.0,,,False,False,smiles_unresolved,cache,default_25,default_25,AutoDock Vina f458505-mod

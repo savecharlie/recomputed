@@ -1,0 +1,196 @@
+openalex_id,topic,field,agent_reported,agent_value,span_verified,human_agrees_Y_N,human_correct_value_if_disagree
+W2913170358,T4_ache_bace1,docking_software,True,AutoDock 4.2.6,yes,Y,
+W2913170358,T4_ache_bace1,software_version,True,4.2.6 (AutoDock); ADT 1.5.6; Discovery Studio 2017 R2,yes,N,Not reported
+W2913170358,T4_ache_bace1,pdb_receptor,True,BACE1: 2WJO; AChE: 4EY7; BChE: 4TPK,yes,N,BACE1: 2WJO; AChE: 4EY7
+W2913170358,T4_ache_bace1,protein_chain,False,,,Y,
+W2913170358,T4_ache_bace1,grid_center,False,,,Y,
+W2913170358,T4_ache_bace1,grid_size,True,"60 x 60 x 60 A, 0.375 A spacing",yes,Y,
+W2913170358,T4_ache_bace1,exhaustiveness,False,,,Y,
+W2913170358,T4_ache_bace1,random_seed,False,,,Y,
+W2913170358,T4_ache_bace1,receptor_preparation,True,Cocrystal ligands/water removed; polar H merged; Kollman + Gasteiger charges; held rigid,yes,N,Cocrystallized ligands and water molecules removed; polar hydrogen atoms merged; Kollman and Gasteiger charges assigned
+W2913170358,T4_ache_bace1,ligand_preparation,True,"3D structures + energy minimization in Discovery Studio 2017 R2; Gasteiger charges added; fully flexible, all torsions rotatable",yes,N,"Gasteiger charges were added by default; rotatable bonds were set, and all torsions were allowed to rotate."
+W2913170358,T4_ache_bace1,validation_redocking,True,"Cocrystal ligands redocked; RMSD 0.54 (E2020), 0.46 (QUD), 0.60 (3F9) A",yes,N,"reported=True, value=""Cocrystallized ligand E2020 redocked; RMSD 0.54 Å"""
+W2913170358,T4_ache_bace1,top_affinity_kcal,True,"-7.90 kcal/mol (top pterosin, 2R-pteroside B on AChE)",yes,N,-7.90 kcal/mol (pteroside D)
+W2913170358,T4_ache_bace1,__e_class,,E2,n/a,N,E1
+W3013960002,T3_braf,docking_software,True,AutoDock Vina (via PyRx),yes,Y,
+W3013960002,T3_braf,software_version,False,,,Y,
+W3013960002,T3_braf,pdb_receptor,True,3OG7,yes,Y,CONFIDENCE: high
+W3013960002,T3_braf,protein_chain,True,Chain A,HALLUCINATED,N,Not reported
+W3013960002,T3_braf,grid_center,False,,,Y,
+W3013960002,T3_braf,grid_size,False,,,Y,
+W3013960002,T3_braf,exhaustiveness,False,,,Y,
+W3013960002,T3_braf,random_seed,False,,,Y,
+W3013960002,T3_braf,receptor_preparation,True,"Discovery Studio Visualizer v16.1.0.15350; added hydrogen atoms, removed excess water; chain B and bound ligand removed",yes,N,Discovery Studio Visualizer version 16.1.0.15350; hydrogen atoms updated; excess water molecules removed
+W3013960002,T3_braf,ligand_preparation,True,Ligands optimized and formatted to PDB files using Spartan 14,yes,Y,
+W3013960002,T3_braf,validation_redocking,True,Redocking of co-crystallized ligand vemurafenib to validate protocol,yes,Y,
+W3013960002,T3_braf,top_affinity_kcal,True,-12.4 kcal/mol (AC4),yes,Y,
+W3013960002,T3_braf,__e_class,,E1,n/a,Y,
+W3089536260,T1_mpro,docking_software,True,AutoDock Vina,yes,Y,
+W3089536260,T1_mpro,software_version,False,,,Y,
+W3089536260,T1_mpro,pdb_receptor,True,"6W63 (3CLpro), 6M71 (RdRp)",yes,N,6W63
+W3089536260,T1_mpro,protein_chain,False,,,Y,
+W3089536260,T1_mpro,grid_center,True,"3CLpro: (-20.810, 19.141, -29.186); RdRp: (117.382, 111.853, 121.073)",yes,Y,
+W3089536260,T1_mpro,grid_size,True,3CLpro: 27x25x25 Å; RdRp: 22x30x46 Å,yes,N,3CLpro/Mpro: 27 × 25 × 25 Å
+W3089536260,T1_mpro,exhaustiveness,False,,,N,8
+W3089536260,T1_mpro,random_seed,False,,,Y,
+W3089536260,T1_mpro,receptor_preparation,True,"AutoDock Tools: waters and bound ligands removed, polar hydrogens and Kollman charges added, non-polar hydrogens merged, saved as PDBQT",yes,Y,
+W3089536260,T1_mpro,ligand_preparation,True,"H added (Marvin Sketch), PM7/MOPAC2016 geometry optimization, then AutoDock Tools: Gasteiger charges added, non-polar H merged, saved as PDBQT",yes,N,"AutoDock Tools: Gasteiger charges added, non-polar hydrogens merged, and results saved"
+W3089536260,T1_mpro,validation_redocking,True,"Redocking of X77 into 3CLpro, RMSD = 0.8909 Å (RdRp not redocked, no liganded model)",yes,Y,
+W3089536260,T1_mpro,top_affinity_kcal,True,"-9.2 kcal/mol (rutin, 3CLpro)",yes,Y,
+W3089536260,T1_mpro,__e_class,,E3,n/a,N,E2
+W3128253086,T1_mpro,docking_software,True,"MOE (Molecular Operating Environment), Chemical Computing Group",yes,Y,CONFIDENCE: high
+W3128253086,T1_mpro,software_version,True,MOE Version 2007.09,yes,Y,
+W3128253086,T1_mpro,pdb_receptor,True,6LU7,HALLUCINATED,N,Not reported
+W3128253086,T1_mpro,protein_chain,False,,,Y,
+W3128253086,T1_mpro,grid_center,False,,,N,"x = -10.729, y = 12.417, z = 68.816"
+W3128253086,T1_mpro,grid_size,False,,,Y,
+W3128253086,T1_mpro,exhaustiveness,False,,,Y,
+W3128253086,T1_mpro,random_seed,False,,,Y,
+W3128253086,T1_mpro,receptor_preparation,True,Original ligand eliminated; all water removed; covalently linked ligand released from Cys145; energy minimized with MMFF94x force field (conjugate gradient); Structure Preparation module used to correct incoherence and assign protonation at pH 7.0,yes,N,Original ligand was eliminated from the downloaded receptor structure.
+W3128253086,T1_mpro,ligand_preparation,False,,,Y,
+W3128253086,T1_mpro,validation_redocking,False,,,Y,
+W3128253086,T1_mpro,top_affinity_kcal,True,-7.75 kcal/mol (range -6.1 to -7.75),yes,Y,CONFIDENCE: high
+W3128253086,T1_mpro,__e_class,,E2,n/a,N,E1
+W3175884245,T1_mpro,docking_software,True,SwissDock (EADock DSS),yes,Y,
+W3175884245,T1_mpro,software_version,False,,,Y,
+W3175884245,T1_mpro,pdb_receptor,True,6W9C (PLpro model; Results also cite 7CJM),yes,N,6W9C
+W3175884245,T1_mpro,protein_chain,False,,,Y,
+W3175884245,T1_mpro,grid_center,False,,,Y,
+W3175884245,T1_mpro,grid_size,False,,,Y,
+W3175884245,T1_mpro,exhaustiveness,False,,,Y,
+W3175884245,T1_mpro,random_seed,False,,,Y,
+W3175884245,T1_mpro,receptor_preparation,True,Energy minimized using GROMACS v2019.6,yes,Y,
+W3175884245,T1_mpro,ligand_preparation,True,"Famotidine from ZINC database, minimized using SwissDock server, full flexibility",yes,N,Famotidine obtained from the ZINC database and minimized using the SwissDock server
+W3175884245,T1_mpro,validation_redocking,False,,,Y,
+W3175884245,T1_mpro,top_affinity_kcal,False,,,Y,
+W3175884245,T1_mpro,__e_class,,E2,n/a,N,E1
+W3199834199,T1_mpro,docking_software,True,AutoDock Vina,yes,Y,
+W3199834199,T1_mpro,software_version,True,1.1.2,yes,Y,CONFIDENCE: high
+W3199834199,T1_mpro,pdb_receptor,True,6LU7,yes,Y,
+W3199834199,T1_mpro,protein_chain,False,,,Y,
+W3199834199,T1_mpro,grid_center,True,"X -11.6, Y 14.5, Z 68.3 Å",yes,Y,
+W3199834199,T1_mpro,grid_size,True,30 × 30 × 30 Å,yes,Y,CONFIDENCE: high
+W3199834199,T1_mpro,exhaustiveness,True,100,yes,Y,
+W3199834199,T1_mpro,random_seed,False,,,Y,
+W3199834199,T1_mpro,receptor_preparation,True,"Waters and native ligand N3 removed; H atoms added, nonpolar H merged; Kollman charges assigned (AutoDockTools 1.5.6)",yes,Y,
+W3199834199,T1_mpro,ligand_preparation,True,Peptides minimized with MM+ then AM1 (HyperChem); charges/torsions assigned in AutoDockTools 1.5.6,yes,N,Peptides were energetically minimized with MM+ followed by semi-empirical AM1 using HyperChem.
+W3199834199,T1_mpro,validation_redocking,False,,,Y,
+W3199834199,T1_mpro,top_affinity_kcal,True,"-7.7 kcal/mol (RVY, P1)",yes,Y,
+W3199834199,T1_mpro,__e_class,,E3,n/a,N,E2
+W4283658617,T2_egfr,docking_software,True,"FlexX-Pharm (FlexX/LeadIT, BioSolveIT) for docking; SeeSAR with HYDE scoring (BioSolveIT)",yes,Y,
+W4283658617,T2_egfr,software_version,False,,,Y,
+W4283658617,T2_egfr,pdb_receptor,True,"5EDQ (used as template for a MODELLER homology model; receptor = homology model, not PDB directly)",yes,Y,
+W4283658617,T2_egfr,protein_chain,False,,,Y,
+W4283658617,T2_egfr,grid_center,False,,,Y,
+W4283658617,T2_egfr,grid_size,False,,,Y,
+W4283658617,T2_egfr,exhaustiveness,False,,,Y,
+W4283658617,T2_egfr,random_seed,False,,,Y,
+W4283658617,T2_egfr,receptor_preparation,True,Homology model built with MODELLER (gap 860-875 filled); lowest-DOPE-score model selected for docking,yes,N,Ten homology models were built using MODELLER
+W4283658617,T2_egfr,ligand_preparation,False,,,Y,
+W4283658617,T2_egfr,validation_redocking,False,No docking redocking/RMSD validation; co-crystal ligand 5N3 used only as MD control,,Y,
+W4283658617,T2_egfr,top_affinity_kcal,False,"Docking score reported as HYDE affinity (not kcal/mol); kcal/mol values are MM-GBSA MD energies, not docking affinity",,Y,
+W4283658617,T2_egfr,__e_class,,E1,n/a,Y,CONFIDENCE: high
+W4284970607,T1_mpro,docking_software,True,Discovery Studio (C-DOCKER protocol),yes,Y,
+W4284970607,T1_mpro,software_version,True,4.5,yes,Y,
+W4284970607,T1_mpro,pdb_receptor,True,"6LZE (Mpro), 6M2N (3CLpro), 4OW0 (PLpro; 7LOS in Results), 1R4L (ACE2)",yes,N,6LZE
+W4284970607,T1_mpro,protein_chain,False,,,Y,
+W4284970607,T1_mpro,grid_center,False,,,Y,
+W4284970607,T1_mpro,grid_size,False,,,Y,
+W4284970607,T1_mpro,exhaustiveness,False,,,Y,
+W4284970607,T1_mpro,random_seed,False,,,Y,
+W4284970607,T1_mpro,receptor_preparation,True,Default Discovery Studio 4.5 protocol; energy-minimized protein,yes,N,Default Discovery Studio 4.5 protocol
+W4284970607,T1_mpro,ligand_preparation,True,ChemDraw 13.0 2D structures saved as PDB; default ligand preparation protocol for 3D,yes,Y,CONFIDENCE: high
+W4284970607,T1_mpro,validation_redocking,True,"Redocking/superimposition of cocrystallized ligands; RMSD 1.30, 1.75, 2.02 Å",yes,N,reported=False
+W4284970607,T1_mpro,top_affinity_kcal,True,"-34.28 kcal/mol (gymnastatin Z, 3CLpro); -34.15 (Mpro)",yes,N,-34.28 kcal/mol
+W4284970607,T1_mpro,__e_class,,E2,n/a,Y,
+W4322763041,T3_braf,docking_software,True,Molegro Virtual Docker (MVD),yes,Y,
+W4322763041,T3_braf,software_version,True,6.0,yes,Y,CONFIDENCE: high
+W4322763041,T3_braf,pdb_receptor,True,3OG7 (V600E-BRAF),yes,Y,
+W4322763041,T3_braf,protein_chain,False,,,Y,
+W4322763041,T3_braf,grid_center,True,"X: 1.59, Y: -1.28, Z: -6.2",yes,Y,
+W4322763041,T3_braf,grid_size,True,cavity radius r: 28 Å (0.30 Å resolution),yes,Y,
+W4322763041,T3_braf,exhaustiveness,False,,,Y,
+W4322763041,T3_braf,random_seed,False,,,Y,
+W4322763041,T3_braf,receptor_preparation,True,Removed water molecules and detached vemurafenib from the protein-ligand complex,yes,Y,
+W4322763041,T3_braf,ligand_preparation,True,Drawn in ChemDraw; energy minimization with MM2 force field in Spartan 14,yes,Y,
+W4322763041,T3_braf,validation_redocking,True,"Redocked vemurafenib, RMSD = 1.413 Å (<2.0 Å)",yes,Y,
+W4322763041,T3_braf,top_affinity_kcal,True,MolDock score -167.523 kcal/mol (compound 10),yes,Y,CONFIDENCE: high
+W4322763041,T3_braf,__e_class,,E3,n/a,Y,
+W4365450003,T1_mpro,docking_software,True,Qvina2.1 (QuickVina 2),yes,Y,
+W4365450003,T1_mpro,software_version,True,2.1,yes,Y,
+W4365450003,T1_mpro,pdb_receptor,True,6LU7,yes,Y,
+W4365450003,T1_mpro,protein_chain,True,A,yes,Y,
+W4365450003,T1_mpro,grid_center,True,"x=-10.351, y=13.549, z=69.904",yes,Y,
+W4365450003,T1_mpro,grid_size,True,"x=22.5, y=28.5, z=26.25",yes,Y,
+W4365450003,T1_mpro,exhaustiveness,True,24,yes,Y,
+W4365450003,T1_mpro,random_seed,False,,,Y,
+W4365450003,T1_mpro,receptor_preparation,True,"PyMOL to remove water, chain B and N3 ligand; AutoDock Tools to add hydrogens, calculate charge, set atom types",yes,Y,
+W4365450003,T1_mpro,ligand_preparation,True,Open Babel to 3D; AutoDock Tools prepare_ligand4.py,yes,Y,
+W4365450003,T1_mpro,validation_redocking,True,Redocked X77 into Mpro (6LU7); RMSD between crystal X77 and top docking conformation used to validate,yes,N,"reported=False, value=""The paper states only that the docking model was validated; redocking of X77 and an RMSD comparison are not reported."""
+W4365450003,T1_mpro,top_affinity_kcal,True,-9.9 kcal/mol (compound 9328),yes,Y,
+W4365450003,T1_mpro,__e_class,,E4,n/a,N,E3
+W4385620344,T2_egfr,docking_software,True,MOE (Molecular Operating Environment),yes,Y,CONFIDENCE: high
+W4385620344,T2_egfr,software_version,True,2019.0102,yes,Y,
+W4385620344,T2_egfr,pdb_receptor,True,"1M17 (EGFR-WT), 2JIV (EGFR-T790M), 4LQM (EGFR-L858R)",yes,N,"1M17 (EGFR-WT), 2JIV (EGFR-T790M)"
+W4385620344,T2_egfr,protein_chain,False,,,Y,
+W4385620344,T2_egfr,grid_center,False,,,Y,
+W4385620344,T2_egfr,grid_size,False,,,Y,
+W4385620344,T2_egfr,exhaustiveness,False,,,Y,
+W4385620344,T2_egfr,random_seed,False,,,Y,
+W4385620344,T2_egfr,receptor_preparation,False,,,N,"Water molecules and bound ligands were removed, and polar hydrogen atoms and Kollman charges were added to the receptor using AutoDockTools."
+W4385620344,T2_egfr,ligand_preparation,False,,,Y,
+W4385620344,T2_egfr,validation_redocking,True,"Co-crystallized ligands (erlotinib, HKI, PD-168393) re-docked to validate the docking technique (Table S3)",yes,Y,
+W4385620344,T2_egfr,top_affinity_kcal,True,"-7.73 kcal/mol (compound 10d, EGFR-WT 1M17)",yes,Y,
+W4385620344,T2_egfr,__e_class,,E2,n/a,N,E1
+W4385805664,T1_mpro,docking_software,True,AutoDock Vina (via PyRx),yes,Y,
+W4385805664,T1_mpro,software_version,True,1.1.2,yes,Y,
+W4385805664,T1_mpro,pdb_receptor,True,"5RFS (3CLpro), 1DCY (sPLA2), 1CJY (cPLA2)",yes,N,5RFS
+W4385805664,T1_mpro,protein_chain,False,,,Y,
+W4385805664,T1_mpro,grid_center,True,"3CLpro: X=-10.79, Y=12.82, Z=68.49; sPLA2: X=-62.10, Y=29.13, Z=41.44; cPLA2: X=86.02, Y=32.13, Z=59.40",yes,Y,
+W4385805664,T1_mpro,grid_size,True,3CLpro: 25×25×25 Å; sPLA2: 16.10×13.69×22.42 Å; cPLA2: 11.08×8.31×13.67 Å,yes,Y,
+W4385805664,T1_mpro,exhaustiveness,False,,,Y,
+W4385805664,T1_mpro,random_seed,False,,,Y,
+W4385805664,T1_mpro,receptor_preparation,True,Proteins prepared with UCSF Chimera and converted to PDBQT via PyRx,HALLUCINATED,N,Proteins were prepared using Chimera-UCSF software
+W4385805664,T1_mpro,ligand_preparation,True,"Structures built in ChemDraw Ultra 10.0, saved as sdf, minimized, converted to pdbqt via OpenBabel in PyRx",yes,Y,
+W4385805664,T1_mpro,validation_redocking,False,,,Y,
+W4385805664,T1_mpro,top_affinity_kcal,True,-23.57 kcal/mol (sPLA2),yes,N,Not reported for Mpro; −23.57 kcal/mol pertains to phospholipase A2 (sPLA2).
+W4385805664,T1_mpro,__e_class,,E3,n/a,N,E2
+W4387312592,T4_ache_bace1,docking_software,True,AutoDock4 (primary screening) and ParDOCK (secondary/rescreening),yes,N,AutoDock4
+W4387312592,T4_ache_bace1,software_version,True,AutoDock4 (version embedded in name); no ParDOCK version given,yes,Y,
+W4387312592,T4_ache_bace1,pdb_receptor,True,AChE = 4M0E; BACE1 = 3CIB,yes,Y,
+W4387312592,T4_ache_bace1,protein_chain,False,,,Y,
+W4387312592,T4_ache_bace1,grid_center,False,,,Y,
+W4387312592,T4_ache_bace1,grid_size,False,,,Y,
+W4387312592,T4_ache_bace1,exhaustiveness,False,,,Y,
+W4387312592,T4_ache_bace1,random_seed,False,,,Y,
+W4387312592,T4_ache_bace1,receptor_preparation,True,"PyMOL: removed extra side chains/heteroatoms/water, added H; missing residues repaired; Kollman charges added; converted to receptor.pdbqt",yes,N,"Removed additional side chains, heteroatoms, and water molecules; added hydrogen atoms."
+W4387312592,T4_ache_bace1,ligand_preparation,True,PubChem .sdf -> OpenBabel .pdb; Gasteiger charges; active torsions kept below 32; converted to ligand.pdbqt,yes,N,Gasteiger charges were added to the ligand molecules.
+W4387312592,T4_ache_bace1,validation_redocking,False,,,Y,
+W4387312592,T4_ache_bace1,top_affinity_kcal,True,"-10.88 kcal/mol (dihydrotabernamine, ParDOCK vs BACE1)",yes,Y,
+W4387312592,T4_ache_bace1,__e_class,,E1,n/a,Y,
+W4414966926,T3_braf,docking_software,True,AutoDock Vina,yes,Y,
+W4414966926,T3_braf,software_version,False,,,Y,
+W4414966926,T3_braf,pdb_receptor,True,5JRQ,yes,Y,
+W4414966926,T3_braf,protein_chain,True,A chain,yes,Y,
+W4414966926,T3_braf,grid_center,True,"-11.46, -4.34, -29.45 Å",yes,Y,
+W4414966926,T3_braf,grid_size,True,"cubic, 25 Å edge",yes,Y,
+W4414966926,T3_braf,exhaustiveness,True,100,yes,Y,
+W4414966926,T3_braf,random_seed,False,,,Y,
+W4414966926,T3_braf,receptor_preparation,True,"polar hydrogens retained, Gasteiger charges via ChimeraX",yes,Y,
+W4414966926,T3_braf,ligand_preparation,True,"SMILES->3D in ChimeraX, 10 conformers MMFF94-minimized via RDKit, converted to pdbqt with Meeko",yes,Y,CONFIDENCE: medium
+W4414966926,T3_braf,validation_redocking,True,"re-docked vemurafenib, heavy-atom RMSD 3.00 Å",yes,Y,
+W4414966926,T3_braf,top_affinity_kcal,False,,,Y,
+W4414966926,T3_braf,__e_class,,E4,n/a,Y,
+W4415482830,T4_ache_bace1,docking_software,True,AutoDock Vina,yes,N,not reported
+W4415482830,T4_ache_bace1,software_version,True,AutoDockTools 1.5.7,yes,N,Not reported
+W4415482830,T4_ache_bace1,pdb_receptor,True,"2LFM, 1C2B, 6NCO, 2FKL/2FJZ, 2G94, 4TPK, 1BND, 5E2W, 7Y5T, 7Y5X, 1XQ8",yes,Y,
+W4415482830,T4_ache_bace1,protein_chain,True,"chains specified per target (e.g., 2LFM:A, 5E2W:P, 7Y5T:B, 7Y5X:B)",yes,N,"5E2W:P, 7Y5T:B, 7Y5X:B, 1XQ8:A"
+W4415482830,T4_ache_bace1,grid_center,True,"per-target; e.g. Aβ (2lfm) X=3.130, Y=−7.037, Z=−17.411 Å",yes,Y,
+W4415482830,T4_ache_bace1,grid_size,True,per-target; e.g. Aβ 80×124×90 Å (whole-protein + 8–10 Å),yes,N,Entire target protein volume plus an additional 8–10 Å in all directions; exact numeric grid dimensions not reported.
+W4415482830,T4_ache_bace1,exhaustiveness,False,,,Y,
+W4415482830,T4_ache_bace1,random_seed,False,,,Y,
+W4415482830,T4_ache_bace1,receptor_preparation,True,"Removed native ligands, non-standard residues, non-target chains using PyMol and ChimeraX",yes,Y,
+W4415482830,T4_ache_bace1,ligand_preparation,True,"Added polar H, optimized geometry, rotatable bonds, Gasteiger charges, converted to PDBQT",yes,Y,
+W4415482830,T4_ache_bace1,validation_redocking,True,Correlation of predicted vs experimental binding energy (Vina −9.6 vs experimental −9.77 kcal/mol),yes,N,reported=False
+W4415482830,T4_ache_bace1,top_affinity_kcal,True,"−9.6 kcal/mol (Vina predicted, validated AChE case)",yes,Y,CONFIDENCE: high
+W4415482830,T4_ache_bace1,__e_class,,E3,n/a,N,E2

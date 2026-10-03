@@ -1,0 +1,21 @@
+{
+  "n_unique_reported_ligands": 116,
+  "resolvable": 90,
+  "resolvable_percent": 77.58620689655173,
+  "resolvable_wilson_95_percent": [
+    69.1834836197141,
+    84.22034276444631
+  ],
+  "unresolved": 26,
+  "unresolved_percent": 22.413793103448278,
+  "explicit_identifier": 41,
+  "pubchem_unique": 49,
+  "classification_counts": {
+    "descriptive_or_series_label": 12,
+    "explicit_identifier": 41,
+    "pubchem_ambiguous": 1,
+    "pubchem_not_found": 13,
+    "pubchem_unique": 49
+  },
+  "definition": "explicit identifier or one unique PubChem CID after deterministic name normalization"
+}
